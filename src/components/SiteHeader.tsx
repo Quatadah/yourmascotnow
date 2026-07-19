@@ -12,9 +12,14 @@ export function SiteHeader() {
         className="wordmark"
         aria-label="Your Mascot Now home"
       >
-        <span className="wordmark-mark" aria-hidden="true">
-          YMN
-        </span>
+        <img
+          className="wordmark-mark"
+          src="/brand/mascot-mark-64.png"
+          width="64"
+          height="64"
+          alt=""
+          aria-hidden="true"
+        />
         <span>Your Mascot Now</span>
       </Link>
       <div className="header-tools">

@@ -1,6 +1,6 @@
-import '@fontsource/knewave/latin-400.css'
 import '@fontsource/atkinson-hyperlegible-next/latin-400.css'
 import '@fontsource/atkinson-hyperlegible-next/latin-700.css'
+import '@fontsource-variable/bricolage-grotesque/wght.css'
 import '@fontsource-variable/commissioner/wght.css'
 
 import {
@@ -32,7 +32,17 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: 'stylesheet', href: appCss },
-      { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+      {
+        rel: 'icon',
+        href: '/brand/mascot-mark-64.png',
+        type: 'image/png',
+        sizes: '64x64',
+      },
+      {
+        rel: 'apple-touch-icon',
+        href: '/brand/apple-touch-icon.png',
+        sizes: '180x180',
+      },
     ],
   }),
   notFoundComponent: NotFoundPage,

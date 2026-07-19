@@ -91,19 +91,21 @@ function Home() {
       <main id="main-content">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <span className="proof-kicker">80 scenes · SVG + prompt</span>
+            <span className="proof-kicker">
+              80 illustrations · SVG + prompt
+            </span>
             <h1 id="hero-title">
-              Pick a scene.
+              Pick an illustration.
               <span>Make the mascot yours.</span>
             </h1>
             <p>
               Choose an illustration, attach it with your portrait, then paste
-              its recipe prompt. The scene and drawing style stay consistent
-              while the mascot takes on your recognizable traits.
+              its recipe prompt. Its composition and drawing style stay
+              consistent while the mascot takes on your recognizable traits.
             </p>
             <ol className="hero-steps" aria-label="How it works">
               <li>
-                <span>01</span> Choose a scene
+                <span>01</span> Choose an illustration
               </li>
               <li>
                 <span>02</span> Attach scene + photo

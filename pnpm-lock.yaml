@@ -8,13 +8,13 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/bricolage-grotesque':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource-variable/commissioner':
         specifier: ^5.3.0
         version: 5.3.0
       '@fontsource/atkinson-hyperlegible-next':
-        specifier: ^5.3.0
-        version: 5.3.0
-      '@fontsource/knewave':
         specifier: ^5.3.0
         version: 5.3.0
       '@tanstack/react-router':
@@ -287,14 +287,14 @@ packages:
       '@noble/hashes':
         optional: true
 
+  '@fontsource-variable/bricolage-grotesque@5.3.0':
+    resolution: {integrity: sha512-TLi9Q4hJjS2UvoTMRSS2nHu6c4R56lAw60NR9QYtVRCHn0XtsFpiEhNffZ8Glsoxu6wEEwLKBP8lb94J52PNBA==}
+
   '@fontsource-variable/commissioner@5.3.0':
     resolution: {integrity: sha512-0IEvi8SO1slc5Pc9tA4OtA01I8UiCcEq/uh12oNjfHuABU9Lnz61l2V8o2cMPUUo3BAo5MbISVK2I/DSpBRw7Q==}
 
   '@fontsource/atkinson-hyperlegible-next@5.3.0':
     resolution: {integrity: sha512-8p1tHVoPDo6oYwSO3sMw5snGwFwSf3TmeSF9Gcj792GXdsg6oqvhoItbj6Hj/XZIk0Xs+Cwu6pkLBAl3Q5HrwA==}
-
-  '@fontsource/knewave@5.3.0':
-    resolution: {integrity: sha512-Ftlumu01eE3sgzn/gPOC/FFlYVA8uud93Bpl1Ilr72EjSWLdWUTkGHeB7ivOpAXatrdmnT/qkorEwAzm7hqXpQ==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -2584,11 +2584,11 @@ snapshots:
   '@exodus/bytes@1.15.1':
     optional: true
 
+  '@fontsource-variable/bricolage-grotesque@5.3.0': {}
+
   '@fontsource-variable/commissioner@5.3.0': {}
 
   '@fontsource/atkinson-hyperlegible-next@5.3.0': {}
-
-  '@fontsource/knewave@5.3.0': {}
 
   '@humanfs/core@0.19.2':
     dependencies:

@@ -10,7 +10,7 @@ test('browses, searches, and filters the 80-illustration catalog', async ({
   page,
 }) => {
   await expect(
-    page.getByRole('heading', { name: /Pick a scene/i }),
+    page.getByRole('heading', { name: /Pick an illustration/i }),
   ).toBeVisible()
   await expect(page.locator('.illustration-card')).toHaveCount(80)
   await expect(page.locator('.availability-dot')).toHaveCount(0)

@@ -3,13 +3,18 @@
   "name": "Your Mascot Now Illustration Library",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/brand/mascot-mark-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/mascot-mark-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#e7ede6",
-  "background_color": "#f7f8f2"
+  "theme_color": "#f2f2f2",
+  "background_color": "#ffffff"
 }

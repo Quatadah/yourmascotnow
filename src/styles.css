@@ -30,8 +30,7 @@
   --space-3xl: 3rem;
   --space-4xl: 4rem;
   --card-shadow: oklch(0.22 0 0 / 0.15);
-  --font-display: 'Commissioner Variable', sans-serif;
-  --font-brand: 'Knewave', sans-serif;
+  --font-display: 'Bricolage Grotesque Variable', sans-serif;
   --font-body: 'Atkinson Hyperlegible Next', sans-serif;
   --font-utility: 'Commissioner Variable', sans-serif;
   color: var(--ink);
@@ -3139,6 +3138,28 @@ body {
   font-size: 0.78rem;
 }
 
+.wordmark-mark {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  padding: 0;
+  background: var(--control-primary);
+  border: 1px solid var(--rule-strong);
+  border-radius: 0.45rem;
+  box-shadow:
+    var(--shadow-sm),
+    inset 0 1px 0 oklch(1 0 0 / 0.14);
+  transform: none;
+}
+
+.wordmark > span:last-child {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
 .color-trigger,
 .theme-toggle {
   position: relative;
@@ -3177,7 +3198,7 @@ body {
 }
 
 .hero h1 {
-  max-width: 12ch;
+  max-width: 13.5ch;
   margin: 0.55rem 0 0.75rem;
   font-size: clamp(2.2rem, 4.4vw, 3.9rem);
   line-height: 0.97;

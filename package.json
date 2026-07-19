@@ -22,9 +22,9 @@
     "check": "prettier --check ."
   },
   "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
     "@fontsource-variable/commissioner": "^5.3.0",
     "@fontsource/atkinson-hyperlegible-next": "^5.3.0",
-    "@fontsource/knewave": "^5.3.0",
     "@tanstack/react-router": "latest",
     "@tanstack/react-start": "latest",
     "lucide-react": "^0.545.0",
