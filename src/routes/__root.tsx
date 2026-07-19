@@ -13,7 +13,7 @@ import {
 import { SiteHeader } from '#/components/SiteHeader'
 import appCss from '../styles.css?url'
 
-const themeBootScript = `(function(){try{var r=document.documentElement,t=localStorage.getItem('ymn-theme'),d=t==='dark'||t==='light'?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.theme=d;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',d==='dark'?'#111613':'#eef1ec');var c=localStorage.getItem('ymn-mascot-color');if(/^#[0-9a-f]{6}$/i.test(c||'')){var n=parseInt(c.slice(1),16),x=(.2126*(n>>16&255)+.7152*(n>>8&255)+.0722*(n&255))/255;r.dataset.mascotColor='custom';r.style.setProperty('--mascot-ink-user',c);r.style.setProperty('--art-paper-user',x>.56?'#111613':'#fbfcf9')}}catch(e){document.documentElement.dataset.theme='light'}})()`
+const themeBootScript = `(function(){try{var r=document.documentElement,t=localStorage.getItem('ymn-theme'),d=t==='dark'||t==='light'?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.theme=d;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',d==='dark'?'#111111':'#f2f2f2');var c=localStorage.getItem('ymn-mascot-color');if(/^#[0-9a-f]{6}$/i.test(c||'')){var n=parseInt(c.slice(1),16),x=(.2126*(n>>16&255)+.7152*(n>>8&255)+.0722*(n&255))/255;r.dataset.mascotColor='custom';r.style.setProperty('--mascot-ink-user',c);r.style.setProperty('--art-paper-user',x>.56?'#111111':'#ffffff')}}catch(e){document.documentElement.dataset.theme='light'}})()`
 
 export const Route = createRootRoute({
   head: () => ({
@@ -26,7 +26,7 @@ export const Route = createRootRoute({
         content:
           'Browse 80 hand-drawn mascot illustrations for identity, biography, portfolio, and development.',
       },
-      { name: 'theme-color', content: '#e7ede6' },
+      { name: 'theme-color', content: '#f2f2f2' },
       { property: 'og:type', content: 'website' },
       { property: 'og:site_name', content: 'Your Mascot Now' },
     ],

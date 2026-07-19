@@ -60,11 +60,11 @@ test('persists the selected color theme', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
   await expect(page.locator('.artwork-color-layer').first()).toHaveCSS(
     'background-color',
-    'rgb(247, 248, 242)',
+    'rgb(245, 245, 245)',
   )
   await expect(page.locator('.card-artwork').first()).toHaveCSS(
     'background-color',
-    'rgb(17, 22, 19)',
+    'rgb(17, 17, 17)',
   )
 
   await page.reload()

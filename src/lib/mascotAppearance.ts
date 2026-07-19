@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react'
 export const mascotColorStorageKey = 'ymn-mascot-color'
 export const appearanceChangeEvent = 'ymn-appearance-change'
 
-export const lightMascotInk = '#171916'
-export const darkMascotInk = '#f7f8f2'
-export const lightArtworkSurface = '#fbfcf9'
-export const darkArtworkSurface = '#111613'
+export const lightMascotInk = '#161616'
+export const darkMascotInk = '#f5f5f5'
+export const lightArtworkSurface = '#ffffff'
+export const darkArtworkSurface = '#111111'
 
 export function isHexColor(value: string | null): value is string {
   return Boolean(value && /^#[0-9a-f]{6}$/i.test(value))
@@ -62,7 +62,7 @@ function getColorInstruction() {
   }
 
   if (root.dataset.theme === 'dark') {
-    return 'Color direction: create the reversed dark-mode version with warm white marker strokes and solid ink areas on a near-black canvas.'
+    return 'Color direction: create the reversed dark-mode version with soft white marker strokes and solid ink areas on a neutral near-black canvas.'
   }
 
   return ''

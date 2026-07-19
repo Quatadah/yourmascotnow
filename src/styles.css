@@ -1,18 +1,18 @@
 :root {
   color-scheme: light;
-  --paper: oklch(0.985 0.004 145);
-  --desk: oklch(0.95 0.008 145);
+  --paper: oklch(0.985 0 0);
+  --desk: oklch(0.91 0 0);
   --panel: oklch(1 0 0);
-  --panel-muted: oklch(0.965 0.007 145);
-  --art-paper: oklch(0.99 0.002 145);
-  --mascot-ink-auto: #171916;
+  --panel-muted: oklch(0.95 0 0);
+  --art-paper: #ffffff;
+  --mascot-ink-auto: #161616;
   --mascot-ink: var(--mascot-ink-user, var(--mascot-ink-auto));
   --artwork-surface: var(--art-paper-user, var(--art-paper));
-  --ink: oklch(0.19 0.012 145);
-  --graphite: oklch(0.45 0.018 145);
-  --blue: oklch(0.57 0.19 257);
-  --blue-dark: oklch(0.44 0.16 257);
-  --red: oklch(0.61 0.2 32);
+  --ink: oklch(0.19 0 0);
+  --graphite: oklch(0.46 0 0);
+  --blue: oklch(0.48 0 0);
+  --blue-dark: oklch(0.28 0 0);
+  --red: oklch(0.44 0 0);
   --rule: color-mix(in oklch, var(--ink) 20%, transparent);
   --rule-strong: color-mix(in oklch, var(--ink) 58%, transparent);
   --surface-blue: color-mix(in oklch, var(--blue) 7%, var(--paper));
@@ -25,7 +25,7 @@
   --space-2xl: 2rem;
   --space-3xl: 3rem;
   --space-4xl: 4rem;
-  --card-shadow: oklch(0.22 0.012 145 / 0.15);
+  --card-shadow: oklch(0.22 0 0 / 0.15);
   --font-display: 'Commissioner Variable', sans-serif;
   --font-brand: 'Knewave', sans-serif;
   --font-body: 'Atkinson Hyperlegible Next', sans-serif;
@@ -39,17 +39,17 @@
 
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --paper: oklch(0.16 0.012 145);
-  --desk: oklch(0.115 0.014 145);
-  --panel: oklch(0.205 0.014 145);
-  --panel-muted: oklch(0.235 0.014 145);
-  --art-paper: #111613;
-  --mascot-ink-auto: #f7f8f2;
-  --ink: oklch(0.94 0.008 145);
-  --graphite: oklch(0.72 0.015 145);
-  --blue: oklch(0.68 0.16 257);
-  --blue-dark: oklch(0.75 0.13 257);
-  --red: oklch(0.69 0.18 32);
+  --paper: oklch(0.145 0 0);
+  --desk: oklch(0.085 0 0);
+  --panel: oklch(0.19 0 0);
+  --panel-muted: oklch(0.235 0 0);
+  --art-paper: #111111;
+  --mascot-ink-auto: #f5f5f5;
+  --ink: oklch(0.94 0 0);
+  --graphite: oklch(0.69 0 0);
+  --blue: oklch(0.72 0 0);
+  --blue-dark: oklch(0.84 0 0);
+  --red: oklch(0.72 0 0);
   --card-shadow: oklch(0 0 0 / 0.4);
   --surface-blue: color-mix(in oklch, var(--blue) 14%, var(--panel));
 }
@@ -1672,8 +1672,8 @@ input,
   top: 0.5rem;
   left: 0.5rem;
   padding: 0.25rem 0.38rem;
-  color: oklch(0.19 0.012 145);
-  background: oklch(0.98 0.004 145 / 0.92);
+  color: oklch(0.19 0 0);
+  background: oklch(0.98 0 0 / 0.92);
 }
 
 .availability-dot::before {
@@ -1972,36 +1972,36 @@ input,
 /* Tactile illustrator's desk */
 
 :root {
-  --paper: oklch(0.955 0.025 86);
-  --desk: oklch(0.79 0.065 69);
-  --panel: oklch(0.985 0.014 88);
-  --panel-muted: oklch(0.92 0.028 82);
-  --ink: oklch(0.255 0.025 64);
-  --graphite: oklch(0.46 0.028 68);
-  --blue: oklch(0.59 0.12 244);
-  --blue-dark: oklch(0.47 0.115 244);
+  --paper: oklch(0.985 0 0);
+  --desk: oklch(0.91 0 0);
+  --panel: oklch(1 0 0);
+  --panel-muted: oklch(0.95 0 0);
+  --ink: oklch(0.19 0 0);
+  --graphite: oklch(0.46 0 0);
+  --blue: oklch(0.48 0 0);
+  --blue-dark: oklch(0.28 0 0);
   --rule: color-mix(in oklch, var(--ink) 14%, transparent);
   --rule-strong: color-mix(in oklch, var(--ink) 28%, transparent);
   --surface-blue: color-mix(in oklch, var(--blue) 8%, var(--panel));
-  --card-shadow: oklch(0.3 0.055 62 / 0.22);
+  --card-shadow: oklch(0.3 0 0 / 0.2);
   --surface-highlight: oklch(1 0 0 / 0.72);
-  --surface-shadow: oklch(0.29 0.045 62 / 0.2);
-  --recess-shadow: oklch(0.31 0.045 62 / 0.18);
+  --surface-shadow: oklch(0.29 0 0 / 0.18);
+  --recess-shadow: oklch(0.31 0 0 / 0.16);
 }
 
 :root[data-theme='dark'] {
-  --paper: oklch(0.19 0.018 73);
-  --desk: oklch(0.125 0.02 69);
-  --panel: oklch(0.235 0.022 73);
-  --panel-muted: oklch(0.275 0.025 73);
-  --ink: oklch(0.925 0.022 86);
-  --graphite: oklch(0.7 0.025 80);
-  --blue: oklch(0.7 0.11 244);
-  --blue-dark: oklch(0.76 0.09 244);
-  --card-shadow: oklch(0.03 0.012 70 / 0.55);
-  --surface-highlight: oklch(0.55 0.015 80 / 0.16);
-  --surface-shadow: oklch(0.02 0.01 70 / 0.5);
-  --recess-shadow: oklch(0.02 0.01 70 / 0.54);
+  --paper: oklch(0.145 0 0);
+  --desk: oklch(0.085 0 0);
+  --panel: oklch(0.19 0 0);
+  --panel-muted: oklch(0.235 0 0);
+  --ink: oklch(0.94 0 0);
+  --graphite: oklch(0.69 0 0);
+  --blue: oklch(0.72 0 0);
+  --blue-dark: oklch(0.84 0 0);
+  --card-shadow: oklch(0.03 0 0 / 0.55);
+  --surface-highlight: oklch(0.55 0 0 / 0.16);
+  --surface-shadow: oklch(0.02 0 0 / 0.5);
+  --recess-shadow: oklch(0.02 0 0 / 0.54);
   --surface-blue: color-mix(in oklch, var(--blue) 11%, var(--panel));
 }
 
@@ -2068,13 +2068,9 @@ input,
 }
 
 .wordmark-mark {
-  color: oklch(0.94 0.024 85);
-  background: linear-gradient(
-    145deg,
-    oklch(0.31 0.035 62),
-    oklch(0.19 0.022 62)
-  );
-  border: 1px solid oklch(0.12 0.018 62 / 0.72);
+  color: oklch(0.96 0 0);
+  background: linear-gradient(145deg, oklch(0.31 0 0), oklch(0.19 0 0));
+  border: 1px solid oklch(0.12 0 0 / 0.72);
   border-radius: 0.38rem;
   box-shadow:
     0 0.18rem 0.3rem var(--surface-shadow),
@@ -2217,9 +2213,9 @@ input,
   display: block;
   width: 4.25rem;
   height: 1rem;
-  background: oklch(0.88 0.06 87 / 0.68);
-  border: 1px solid oklch(0.72 0.055 82 / 0.25);
-  box-shadow: 0 0.12rem 0.25rem oklch(0.28 0.04 65 / 0.12);
+  background: oklch(0.86 0 0 / 0.68);
+  border: 1px solid oklch(0.62 0 0 / 0.22);
+  box-shadow: 0 0.12rem 0.25rem oklch(0.28 0 0 / 0.12);
   backdrop-filter: blur(1px);
 }
 
@@ -2260,14 +2256,14 @@ input,
 
 .action--primary,
 .copy-prompt {
-  color: oklch(0.97 0.012 86);
+  color: oklch(0.97 0 0);
   background: linear-gradient(
     180deg,
     color-mix(in oklch, var(--blue-dark) 90%, white),
     color-mix(in oklch, var(--blue-dark) 88%, black)
   );
   border-color: color-mix(in oklch, var(--blue-dark) 72%, var(--ink));
-  text-shadow: 0 1px 0 oklch(0.2 0.03 244 / 0.55);
+  text-shadow: 0 1px 0 oklch(0.2 0 0 / 0.55);
 }
 
 .action:hover,
@@ -2283,7 +2279,7 @@ input,
 
 .action--primary:hover,
 .copy-prompt:hover {
-  color: oklch(0.98 0.01 86);
+  color: oklch(0.98 0 0);
   background: linear-gradient(
     180deg,
     color-mix(in oklch, var(--blue) 88%, white),
@@ -2446,10 +2442,10 @@ input,
 .availability-dot {
   top: 0.75rem;
   left: 0.75rem;
-  border-color: oklch(0.35 0.02 70 / 0.28);
+  border-color: oklch(0.35 0 0 / 0.28);
   border-radius: 0.35rem;
   box-shadow:
-    0 0.15rem 0.3rem oklch(0.25 0.03 65 / 0.16),
+    0 0.15rem 0.3rem oklch(0.25 0 0 / 0.16),
     inset 0 1px 0 oklch(1 0 0 / 0.74);
 }
 

@@ -21,7 +21,7 @@ export function ThemeToggle() {
     window.localStorage.setItem(storageKey, nextTheme)
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', nextTheme === 'dark' ? '#111613' : '#eef1ec')
+      ?.setAttribute('content', nextTheme === 'dark' ? '#111111' : '#f2f2f2')
     setTheme(nextTheme)
     window.dispatchEvent(new CustomEvent(appearanceChangeEvent))
   }
