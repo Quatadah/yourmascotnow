@@ -62,12 +62,11 @@ function NotFoundPage() {
     <div className="site-shell">
       <SiteHeader />
       <main id="main-content" className="not-found-page">
-        <span className="proof-kicker">YM/ERR/404</span>
         <div className="not-found-mark" aria-hidden="true">
           ?
         </div>
-        <h1>This proof is off the desk.</h1>
-        <p>The page may have moved, or the catalog code was never assigned.</p>
+        <h1>Illustration not found.</h1>
+        <p>The page may have moved or the address may be incorrect.</p>
         <Link
           to="/"
           search={{ q: '', available: false }}

@@ -6,13 +6,17 @@ test.beforeEach(async ({ page }) => {
   await page.waitForLoadState('networkidle')
 })
 
-test('browses, searches, and filters the 80-proof catalog', async ({
+test('browses, searches, and filters the 80-illustration catalog', async ({
   page,
 }) => {
   await expect(
     page.getByRole('heading', { name: /Pick a scene/i }),
   ).toBeVisible()
   await expect(page.locator('.illustration-card')).toHaveCount(80)
+  await expect(page.locator('.availability-dot')).toHaveCount(0)
+  await expect(page.locator('.illustration-card').first()).not.toContainText(
+    'YM/',
+  )
 
   await page.getByRole('searchbox', { name: /search all 80/i }).fill('logo')
   await expect(page).toHaveURL(/q=logo/)
@@ -25,10 +29,32 @@ test('browses, searches, and filters the 80-proof catalog', async ({
     .click()
   await expect(page).toHaveURL(/category=portfolio/)
   await expect(page.getByText('18 scenes in Portfolio')).toBeVisible()
-  await expect(page.locator('.card-recipe .copy-prompt')).toHaveCount(18)
+  await expect(
+    page.locator('.illustration-card > .card-caption > .copy-prompt'),
+  ).toHaveCount(18)
 })
 
-test('opens a dedicated proof and traverses to the next item', async ({
+test('adapts the illustration grid to the viewport', async ({ page }) => {
+  const columnCount = async () => {
+    const template = await page
+      .locator('.catalog-grid')
+      .evaluate((element) =>
+        window.getComputedStyle(element).gridTemplateColumns.split(' '),
+      )
+    return template.length
+  }
+
+  await page.setViewportSize({ width: 1100, height: 900 })
+  expect(await columnCount()).toBe(3)
+
+  await page.setViewportSize({ width: 760, height: 900 })
+  expect(await columnCount()).toBe(2)
+
+  await page.setViewportSize({ width: 440, height: 900 })
+  expect(await columnCount()).toBe(1)
+})
+
+test('opens a dedicated illustration and traverses to the next item', async ({
   page,
 }) => {
   await page.getByRole('link', { name: 'View Mascot waving hello' }).click()
@@ -44,14 +70,13 @@ test('opens a dedicated proof and traverses to the next item', async ({
   await expect(page.locator('.prompt-copy')).toContainText(
     'Use my uploaded portrait',
   )
-  await expect(page.getByText('YM/01/001').first()).toBeVisible()
   await expect(
     page.getByRole('link', { name: 'Download SVG' }),
   ).toHaveAttribute('href', /\.svg$/)
   await expect(
     page.getByRole('button', { name: 'Current color SVG' }),
   ).toBeVisible()
-  await page.getByRole('link', { name: /Next proof/i }).click()
+  await page.getByRole('link', { name: /Next illustration/i }).click()
   await expect(page).toHaveURL(/mascot-introducing-himself-with-an-open-hand/)
 })
 
@@ -91,7 +116,10 @@ test('applies custom color to artwork and copied prompts', async ({
     'rgb(230, 73, 45)',
   )
 
-  await page.locator('.card-recipe .copy-prompt').first().click()
+  await page
+    .locator('.illustration-card > .card-caption > .copy-prompt')
+    .first()
+    .click()
   const copiedPrompt = await page.evaluate(() => navigator.clipboard.readText())
   expect(copiedPrompt).toContain('#e6492d')
 
@@ -107,7 +135,9 @@ test('copies the photo-to-mascot recipe from a gallery card', async ({
   page,
 }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write'])
-  const copyButton = page.locator('.card-recipe .copy-prompt').first()
+  const copyButton = page
+    .locator('.illustration-card > .card-caption > .copy-prompt')
+    .first()
   await copyButton.click()
   await expect(copyButton).toContainText('Prompt copied')
 

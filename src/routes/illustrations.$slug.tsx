@@ -82,16 +82,12 @@ function IllustrationDetail() {
             search={{ q: '', available: false }}
             className="text-link"
           >
-            <ArrowLeft aria-hidden="true" /> Back to all proofs
+            <ArrowLeft aria-hidden="true" /> Back to all illustrations
           </Link>
-          <span>{illustration.proofCode}</span>
         </div>
 
         <article className="detail-layout">
           <div className="detail-proof">
-            <div className="detail-proof-index" aria-hidden="true">
-              {String(illustration.id).padStart(3, '0')}
-            </div>
             <IllustrationArtwork illustration={illustration} eager />
           </div>
 
@@ -105,16 +101,12 @@ function IllustrationDetail() {
               }}
               className="category-stamp"
             >
-              {category.proofCode} / {category.title}
+              {category.title}
             </Link>
             <h1>{illustration.title}</h1>
             <p>{illustration.alt}</p>
 
             <dl className="detail-specs">
-              <div>
-                <dt>Catalog</dt>
-                <dd>{illustration.proofCode}</dd>
-              </div>
               <div>
                 <dt>Status</dt>
                 <dd>
@@ -190,7 +182,7 @@ function IllustrationDetail() {
           </div>
           <div className="prompt-copy-wrap">
             <div className="prompt-copy-label">
-              <span>Prompt / {illustration.proofCode}</span>
+              <span>Image prompt</span>
               <span>{colorAwarePrompt.length} characters</span>
             </div>
             <p className="prompt-copy">{colorAwarePrompt}</p>
@@ -202,7 +194,7 @@ function IllustrationDetail() {
             <Link to="/illustrations/$slug" params={{ slug: previous.slug }}>
               <ArrowLeft aria-hidden="true" />
               <span>
-                <small>Previous proof</small>
+                <small>Previous illustration</small>
                 {previous.title}
               </span>
             </Link>
@@ -212,7 +204,7 @@ function IllustrationDetail() {
           {next ? (
             <Link to="/illustrations/$slug" params={{ slug: next.slug }}>
               <span>
-                <small>Next proof</small>
+                <small>Next illustration</small>
                 {next.title}
               </span>
               <ArrowRight aria-hidden="true" />
@@ -224,11 +216,9 @@ function IllustrationDetail() {
 
         <section className="related-section" aria-labelledby="related-title">
           <div className="section-heading">
-            <span className="proof-kicker">
-              More from sheet {category.proofCode}
-            </span>
+            <span className="proof-kicker">More from {category.title}</span>
             <h2 id="related-title">
-              Related {category.title.toLowerCase()} proofs
+              Related {category.title.toLowerCase()} illustrations
             </h2>
           </div>
           <div className="related-grid">

@@ -37,7 +37,7 @@ export const Route = createFileRoute('/')({
       {
         name: 'description',
         content:
-          'Search and explore a numbered library of 80 black-and-white mascot illustrations.',
+          'Search and explore a library of 80 black-and-white mascot illustrations.',
       },
     ],
   }),
@@ -118,13 +118,11 @@ function Home() {
             aria-label={`Featured mascot recipe: ${featured.title}`}
           >
             <div className="hero-proof-meta">
-              <span>Featured recipe</span>
-              <span>{featured.proofCode}</span>
+              <span>Featured illustration</span>
             </div>
             <IllustrationArtwork illustration={featured} eager />
             <div className="hero-proof-caption">
               <div>
-                <span>Scene {String(featured.id).padStart(3, '0')}</span>
                 <strong>{featured.title}</strong>
               </div>
               <CopyPromptButton prompt={featured.prompt} compact />
@@ -170,7 +168,7 @@ function Home() {
               })}
               className={!search.category ? 'is-active' : undefined}
             >
-              <span>00</span> All proofs
+              All illustrations
             </Link>
             {categories.map((category) => (
               <Link
@@ -185,7 +183,7 @@ function Home() {
                   search.category === category.id ? 'is-active' : undefined
                 }
               >
-                <span>{category.proofCode}</span> {category.title}
+                {category.title}
               </Link>
             ))}
           </div>
@@ -241,7 +239,6 @@ function Home() {
           </section>
         ) : (
           <section className="empty-results" aria-live="polite">
-            <span className="proof-kicker">YM/SEARCH/000</span>
             <h2>No scene matches that search.</h2>
             <p>
               Try a broader phrase, another category, or include artwork still

@@ -30,16 +30,10 @@ export function IllustrationCard({
         >
           <div className="card-artwork">
             <IllustrationArtwork illustration={illustration} />
-            <span
-              className={`availability-dot${illustration.available ? ' is-available' : ''}`}
-            >
-              {illustration.available ? 'Available' : 'Proof pending'}
-            </span>
           </div>
         </Link>
       </div>
       <div className="card-caption">
-        <span className="card-proof">{illustration.proofCode}</span>
         <Link
           to="/illustrations/$slug"
           params={{ slug: illustration.slug }}
@@ -49,9 +43,6 @@ export function IllustrationCard({
           <ArrowUpRight className="card-arrow" aria-hidden="true" />
         </Link>
         <span className="card-category">{category.title}</span>
-      </div>
-      <div className="card-recipe">
-        <span>Photo → mascot</span>
         <CopyPromptButton prompt={illustration.prompt} compact />
       </div>
     </article>
