@@ -15,7 +15,15 @@ test('browses, searches, and filters the 80-illustration catalog', async ({
   await expect(page.locator('.illustration-card')).toHaveCount(80)
   await expect(page.locator('.availability-dot')).toHaveCount(0)
   await expect(page.locator('.header-nav')).toHaveCount(0)
+  await expect(page.locator('.site-header')).toHaveCSS(
+    'background-image',
+    'none',
+  )
   await expect(page.locator('.hero')).toHaveCSS('background-image', 'none')
+  await expect(page.locator('.catalog-controls')).toHaveCSS(
+    'background-image',
+    'none',
+  )
   await expect(page.locator('.catalog-grid')).toHaveCSS(
     'background-image',
     'none',

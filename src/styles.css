@@ -2613,10 +2613,13 @@ body {
 
 .site-header {
   grid-template-columns: minmax(0, 1fr) auto;
+  background: transparent;
   border-radius: 0;
+  box-shadow: none;
 }
 
 .hero,
+.catalog-controls,
 .catalog-grid {
   background: transparent;
   box-shadow: none;
