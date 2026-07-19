@@ -1,0 +1,354 @@
+[
+  { "id": 1, "title": "Mascot waving hello", "category": "identity" },
+  {
+    "id": 2,
+    "title": "Mascot introducing himself with an open hand",
+    "category": "identity"
+  },
+  {
+    "id": 3,
+    "title": "Mascot pointing toward himself",
+    "category": "identity"
+  },
+  { "id": 4, "title": "Mascot wearing a name badge", "category": "identity" },
+  {
+    "id": 5,
+    "title": "Mascot holding a personal profile card",
+    "category": "identity"
+  },
+  { "id": 6, "title": "Mascot holding a logo symbol", "category": "identity" },
+  {
+    "id": 7,
+    "title": "Mascot standing beside a large logo",
+    "category": "identity"
+  },
+  { "id": 8, "title": "Mascot drawing his own logo", "category": "identity" },
+  { "id": 9, "title": "Mascot holding a signature", "category": "identity" },
+  { "id": 10, "title": "Mascot looking into a mirror", "category": "identity" },
+  {
+    "id": 11,
+    "title": "Mascot adjusting his sunglasses",
+    "category": "identity"
+  },
+  {
+    "id": 12,
+    "title": "Mascot standing confidently with crossed arms",
+    "category": "identity"
+  },
+  { "id": 13, "title": "Mascot giving a thumbs-up", "category": "identity" },
+  {
+    "id": 14,
+    "title": "Mascot smiling with sparkle elements",
+    "category": "identity"
+  },
+  {
+    "id": 15,
+    "title": "Mascot peeking from behind a card",
+    "category": "identity"
+  },
+  {
+    "id": 16,
+    "title": "Mascot inside a circular profile frame",
+    "category": "identity"
+  },
+  {
+    "id": 17,
+    "title": "Mascot reading an about document",
+    "category": "biography"
+  },
+  {
+    "id": 18,
+    "title": "Mascot pointing toward a timeline",
+    "category": "biography"
+  },
+  {
+    "id": 19,
+    "title": "Mascot holding an identity card",
+    "category": "biography"
+  },
+  { "id": 20, "title": "Mascot beside a map pin", "category": "biography" },
+  {
+    "id": 21,
+    "title": "Mascot holding a calendar representing experience",
+    "category": "biography"
+  },
+  {
+    "id": 22,
+    "title": "Mascot carrying a suitcase representing his journey",
+    "category": "biography"
+  },
+  {
+    "id": 23,
+    "title": "Mascot climbing career steps",
+    "category": "biography"
+  },
+  {
+    "id": 24,
+    "title": "Mascot following a dotted journey path",
+    "category": "biography"
+  },
+  {
+    "id": 25,
+    "title": "Mascot looking at past and future arrows",
+    "category": "biography"
+  },
+  {
+    "id": 26,
+    "title": "Mascot holding a childhood photo frame",
+    "category": "biography"
+  },
+  {
+    "id": 27,
+    "title": "Mascot standing beside milestone flags",
+    "category": "biography"
+  },
+  {
+    "id": 28,
+    "title": "Mascot placing a pin on a timeline",
+    "category": "biography"
+  },
+  {
+    "id": 29,
+    "title": "Mascot holding a project card",
+    "category": "portfolio"
+  },
+  {
+    "id": 30,
+    "title": "Mascot standing beside a portfolio webpage",
+    "category": "portfolio"
+  },
+  {
+    "id": 31,
+    "title": "Mascot pointing toward a website preview",
+    "category": "portfolio"
+  },
+  {
+    "id": 32,
+    "title": "Mascot holding multiple stacked project cards",
+    "category": "portfolio"
+  },
+  {
+    "id": 33,
+    "title": "Mascot presenting a featured project",
+    "category": "portfolio"
+  },
+  {
+    "id": 34,
+    "title": "Mascot opening a project folder",
+    "category": "portfolio"
+  },
+  {
+    "id": 35,
+    "title": "Mascot revealing a project from behind a curtain",
+    "category": "portfolio"
+  },
+  {
+    "id": 36,
+    "title": "Mascot arranging portfolio cards",
+    "category": "portfolio"
+  },
+  {
+    "id": 37,
+    "title": "Mascot inspecting a project with a magnifying glass",
+    "category": "portfolio"
+  },
+  {
+    "id": 38,
+    "title": "Mascot comparing two project versions",
+    "category": "portfolio"
+  },
+  {
+    "id": 39,
+    "title": "Mascot placing a project into a display frame",
+    "category": "portfolio"
+  },
+  {
+    "id": 40,
+    "title": "Mascot presenting a case-study board",
+    "category": "portfolio"
+  },
+  {
+    "id": 41,
+    "title": "Mascot holding a laptop showing a website",
+    "category": "portfolio"
+  },
+  {
+    "id": 42,
+    "title": "Mascot standing inside a browser window",
+    "category": "portfolio"
+  },
+  {
+    "id": 43,
+    "title": "Mascot launching a project like a rocket",
+    "category": "portfolio"
+  },
+  {
+    "id": 44,
+    "title": "Mascot polishing a project with a cloth",
+    "category": "portfolio"
+  },
+  {
+    "id": 45,
+    "title": "Mascot holding a before and after panel",
+    "category": "portfolio"
+  },
+  {
+    "id": 46,
+    "title": "Mascot pointing toward project metrics",
+    "category": "portfolio"
+  },
+  {
+    "id": 47,
+    "title": "Mascot holding a code window",
+    "category": "development"
+  },
+  { "id": 48, "title": "Mascot typing on a laptop", "category": "development" },
+  {
+    "id": 49,
+    "title": "Mascot surrounded by code brackets",
+    "category": "development"
+  },
+  {
+    "id": 50,
+    "title": "Mascot holding a terminal window",
+    "category": "development"
+  },
+  { "id": 51, "title": "Mascot running a command", "category": "development" },
+  {
+    "id": 52,
+    "title": "Mascot debugging with a magnifying glass",
+    "category": "development"
+  },
+  { "id": 53, "title": "Mascot catching a bug", "category": "development" },
+  {
+    "id": 54,
+    "title": "Mascot removing a bug from code",
+    "category": "development"
+  },
+  {
+    "id": 55,
+    "title": "Mascot connecting code blocks",
+    "category": "development"
+  },
+  {
+    "id": 56,
+    "title": "Mascot assembling components",
+    "category": "development"
+  },
+  {
+    "id": 57,
+    "title": "Mascot building a website with blocks",
+    "category": "development"
+  },
+  {
+    "id": 58,
+    "title": "Mascot holding frontend and backend panels",
+    "category": "development"
+  },
+  {
+    "id": 59,
+    "title": "Mascot connecting an API plug",
+    "category": "development"
+  },
+  {
+    "id": 60,
+    "title": "Mascot sending an API request",
+    "category": "development"
+  },
+  {
+    "id": 61,
+    "title": "Mascot holding JSON-shaped blocks",
+    "category": "development"
+  },
+  {
+    "id": 62,
+    "title": "Mascot working with a database cylinder",
+    "category": "development"
+  },
+  {
+    "id": 63,
+    "title": "Mascot organizing database tables",
+    "category": "development"
+  },
+  {
+    "id": 64,
+    "title": "Mascot connecting database nodes",
+    "category": "development"
+  },
+  {
+    "id": 65,
+    "title": "Mascot pushing code into a repository",
+    "category": "development"
+  },
+  {
+    "id": 66,
+    "title": "Mascot pulling code from a cloud",
+    "category": "development"
+  },
+  {
+    "id": 67,
+    "title": "Mascot merging two branches",
+    "category": "development"
+  },
+  {
+    "id": 68,
+    "title": "Mascot resolving a merge conflict",
+    "category": "development"
+  },
+  {
+    "id": 69,
+    "title": "Mascot reviewing a pull request",
+    "category": "development"
+  },
+  {
+    "id": 70,
+    "title": "Mascot approving code with a checkmark",
+    "category": "development"
+  },
+  {
+    "id": 71,
+    "title": "Mascot rejecting broken code",
+    "category": "development"
+  },
+  { "id": 72, "title": "Mascot writing tests", "category": "development" },
+  {
+    "id": 73,
+    "title": "Mascot running automated tests",
+    "category": "development"
+  },
+  {
+    "id": 74,
+    "title": "Mascot celebrating passing tests",
+    "category": "development"
+  },
+  {
+    "id": 75,
+    "title": "Mascot fixing failing tests",
+    "category": "development"
+  },
+  {
+    "id": 76,
+    "title": "Mascot refactoring tangled code",
+    "category": "development"
+  },
+  {
+    "id": 77,
+    "title": "Mascot cleaning messy code",
+    "category": "development"
+  },
+  {
+    "id": 78,
+    "title": "Mascot holding a reusable component",
+    "category": "development"
+  },
+  {
+    "id": 79,
+    "title": "Mascot building a design system component",
+    "category": "development"
+  },
+  {
+    "id": 80,
+    "title": "Mascot deploying an application",
+    "category": "development"
+  }
+]

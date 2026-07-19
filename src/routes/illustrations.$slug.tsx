@@ -1,0 +1,219 @@
+import { ArrowLeft, ArrowRight, Check, Copy, Download } from 'lucide-react'
+import { Link, createFileRoute, notFound } from '@tanstack/react-router'
+import { useState } from 'react'
+
+import { IllustrationArtwork } from '#/components/IllustrationArtwork'
+import { IllustrationCard } from '#/components/IllustrationCard'
+import { SiteHeader } from '#/components/SiteHeader'
+import {
+  getAdjacentIllustrations,
+  getCategory,
+  getIllustration,
+  illustrations,
+} from '#/data/catalog'
+
+export const Route = createFileRoute('/illustrations/$slug')({
+  loader: ({ params }) => {
+    const illustration = getIllustration(params.slug)
+
+    if (!illustration) {
+      throw notFound()
+    }
+
+    return illustration
+  },
+  head: ({ loaderData }) => {
+    if (!loaderData) return {}
+
+    const meta = [
+      { title: `${loaderData.title} — Your Mascot Now` },
+      { name: 'description', content: loaderData.alt },
+      { property: 'og:title', content: loaderData.title },
+      { property: 'og:description', content: loaderData.alt },
+    ]
+
+    if (loaderData.asset) {
+      meta.push({
+        property: 'og:image',
+        content: loaderData.asset.previewLarge,
+      })
+    }
+
+    return { meta }
+  },
+  component: IllustrationDetail,
+})
+
+function IllustrationDetail() {
+  const illustration = Route.useLoaderData()
+  const category = getCategory(illustration.category)
+  const { previous, next } = getAdjacentIllustrations(illustration)
+  const [copyState, setCopyState] = useState<'idle' | 'copied' | 'failed'>(
+    'idle',
+  )
+  const related = illustrations
+    .filter(
+      (item) =>
+        item.category === illustration.category && item.id !== illustration.id,
+    )
+    .slice(0, 3)
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href)
+      setCopyState('copied')
+      window.setTimeout(() => setCopyState('idle'), 1800)
+    } catch {
+      setCopyState('failed')
+    }
+  }
+
+  return (
+    <div className="site-shell detail-page">
+      <SiteHeader />
+      <main id="main-content">
+        <div className="detail-toolbar">
+          <Link
+            to="/"
+            search={{ q: '', available: false }}
+            className="text-link"
+          >
+            <ArrowLeft aria-hidden="true" /> Back to all proofs
+          </Link>
+          <span>{illustration.proofCode}</span>
+        </div>
+
+        <article className="detail-layout">
+          <div className="detail-proof">
+            <div className="detail-proof-index" aria-hidden="true">
+              {String(illustration.id).padStart(3, '0')}
+            </div>
+            <IllustrationArtwork illustration={illustration} eager />
+          </div>
+
+          <div className="detail-copy">
+            <Link
+              to="/"
+              search={{
+                q: '',
+                available: false,
+                category: illustration.category,
+              }}
+              className="category-stamp"
+            >
+              {category.proofCode} / {category.title}
+            </Link>
+            <h1>{illustration.title}</h1>
+            <p>{illustration.alt}</p>
+
+            <dl className="detail-specs">
+              <div>
+                <dt>Catalog</dt>
+                <dd>{illustration.proofCode}</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>
+                  {illustration.available
+                    ? 'Original available'
+                    : 'Awaiting original'}
+                </dd>
+              </div>
+              <div>
+                <dt>Series</dt>
+                <dd>{category.range}</dd>
+              </div>
+            </dl>
+
+            <div className="detail-actions">
+              {illustration.asset ? (
+                <a
+                  href={illustration.asset.original}
+                  download
+                  className="action action--primary"
+                >
+                  <Download aria-hidden="true" /> Download original
+                </a>
+              ) : (
+                <span className="action action--disabled" aria-disabled="true">
+                  <Download aria-hidden="true" /> Original pending
+                </span>
+              )}
+              <button
+                type="button"
+                className="action action--secondary"
+                onClick={copyLink}
+              >
+                {copyState === 'copied' ? (
+                  <Check aria-hidden="true" />
+                ) : (
+                  <Copy aria-hidden="true" />
+                )}
+                {copyState === 'copied'
+                  ? 'Link copied'
+                  : copyState === 'failed'
+                    ? 'Copy unavailable'
+                    : 'Copy link'}
+              </button>
+            </div>
+            <p className="rights-note">
+              Downloading does not grant reuse rights. Artwork remains all
+              rights reserved.
+            </p>
+          </div>
+        </article>
+
+        <nav className="proof-pagination" aria-label="Adjacent illustrations">
+          {previous ? (
+            <Link to="/illustrations/$slug" params={{ slug: previous.slug }}>
+              <ArrowLeft aria-hidden="true" />
+              <span>
+                <small>Previous proof</small>
+                {previous.title}
+              </span>
+            </Link>
+          ) : (
+            <span />
+          )}
+          {next ? (
+            <Link to="/illustrations/$slug" params={{ slug: next.slug }}>
+              <span>
+                <small>Next proof</small>
+                {next.title}
+              </span>
+              <ArrowRight aria-hidden="true" />
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
+
+        <section className="related-section" aria-labelledby="related-title">
+          <div className="section-heading">
+            <span className="proof-kicker">
+              More from sheet {category.proofCode}
+            </span>
+            <h2 id="related-title">
+              Related {category.title.toLowerCase()} proofs
+            </h2>
+          </div>
+          <div className="related-grid">
+            {related.map((item) => (
+              <IllustrationCard key={item.id} illustration={item} />
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <footer className="site-footer">
+        <Link to="/" search={{ q: '', available: false }}>
+          Your Mascot Now
+        </Link>
+        <p>
+          Artwork © {new Date().getFullYear()} Your Mascot Now. All rights
+          reserved.
+        </p>
+      </footer>
+    </div>
+  )
+}
