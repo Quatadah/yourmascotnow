@@ -2616,6 +2616,12 @@ body {
   border-radius: 0;
 }
 
+.hero,
+.catalog-grid {
+  background: transparent;
+  box-shadow: none;
+}
+
 .hero-proof::before,
 .hero-proof::after,
 .proof-kicker::before,
