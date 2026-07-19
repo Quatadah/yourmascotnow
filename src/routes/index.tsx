@@ -129,14 +129,9 @@ function Home() {
             className="hero-proof"
             aria-label={`Featured mascot recipe: ${featured.title}`}
           >
-            <div className="hero-proof-meta">
-              <span>Featured illustration</span>
-            </div>
             <IllustrationArtwork illustration={featured} eager />
             <div className="hero-proof-caption">
-              <div>
-                <strong>{featured.title}</strong>
-              </div>
+              <strong>{featured.title}</strong>
               <CopyPromptButton prompt={featured.prompt} compact />
             </div>
           </div>
