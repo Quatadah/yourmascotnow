@@ -161,6 +161,7 @@ function Home() {
           <div className="category-rail" aria-label="Filter by category">
             <Link
               to="/"
+              resetScroll={false}
               search={(previous) => ({
                 q: previous.q ?? '',
                 available: previous.available ?? false,
@@ -174,6 +175,7 @@ function Home() {
               <Link
                 key={category.id}
                 to="/"
+                resetScroll={false}
                 search={(previous) => ({
                   q: previous.q ?? '',
                   available: previous.available ?? false,

@@ -72,6 +72,34 @@ test('adapts the illustration grid to the viewport', async ({ page }) => {
   expect(await columnCount()).toBe(1)
 })
 
+test('keeps the current scroll position when filtering categories', async ({
+  page,
+}) => {
+  const developmentFilter = page
+    .locator('.category-rail a')
+    .filter({ hasText: 'Development' })
+  await developmentFilter.scrollIntoViewIfNeeded()
+
+  if ((await page.evaluate(() => window.scrollY)) === 0) {
+    await page.evaluate(() => {
+      document.documentElement.style.scrollBehavior = 'auto'
+      window.scrollTo(0, 50)
+    })
+  }
+
+  const scrollPosition = await page.evaluate(() => window.scrollY)
+  expect(scrollPosition).toBeGreaterThan(0)
+  await expect(developmentFilter).toBeVisible()
+
+  await developmentFilter.click()
+  await expect(page).toHaveURL(/category=development/)
+  await expect
+    .poll(async () =>
+      Math.abs((await page.evaluate(() => window.scrollY)) - scrollPosition),
+    )
+    .toBeLessThanOrEqual(1)
+})
+
 test('opens a dedicated illustration and traverses to the next item', async ({
   page,
 }) => {
