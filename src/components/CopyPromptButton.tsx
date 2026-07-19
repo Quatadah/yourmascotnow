@@ -35,6 +35,8 @@ export function CopyPromptButton({
     <button
       type="button"
       className={`copy-prompt${compact ? ' copy-prompt--compact' : ''}`}
+      data-state={state}
+      aria-live="polite"
       onClick={copyPrompt}
     >
       {state === 'copied' ? (

@@ -39,7 +39,9 @@ export function ColorizedSvgDownload({
   return (
     <button
       type="button"
-      className="action action--secondary"
+      className="action action--secondary action--compact"
+      data-state={state}
+      aria-live="polite"
       onClick={downloadColoredSvg}
     >
       {state === 'done' ? (

@@ -78,7 +78,11 @@ function Home() {
   }, [])
 
   const clearFilters = () => {
-    void navigate({ search: { q: '', available: false }, replace: true })
+    void navigate({
+      search: { q: '', available: false },
+      replace: true,
+      resetScroll: false,
+    })
   }
 
   return (
@@ -109,7 +113,7 @@ function Home() {
               </li>
             </ol>
             <a href="#catalog" className="action action--primary hero-action">
-              Browse all 80 scenes <span aria-hidden="true">↓</span>
+              Browse illustrations <span aria-hidden="true">↓</span>
             </a>
           </div>
 

@@ -120,7 +120,7 @@ function IllustrationDetail() {
                   <a
                     href={illustration.asset.original}
                     download
-                    className="action action--secondary"
+                    className="action action--secondary action--compact"
                   >
                     <Download aria-hidden="true" /> Source PNG
                   </a>
@@ -132,7 +132,9 @@ function IllustrationDetail() {
               )}
               <button
                 type="button"
-                className="action action--secondary"
+                className="action action--secondary action--compact"
+                data-state={copyState}
+                aria-live="polite"
                 onClick={copyLink}
               >
                 {copyState === 'copied' ? (
