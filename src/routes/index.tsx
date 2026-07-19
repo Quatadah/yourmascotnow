@@ -1,4 +1,4 @@
-import { Search, SlidersHorizontal, X } from 'lucide-react'
+import { Search, X } from 'lucide-react'
 import {
   Link,
   createFileRoute,
@@ -45,6 +45,12 @@ export const Route = createFileRoute('/')({
 })
 
 const categoryLeadIds = new Set([1, 17, 29, 47])
+const categoryCounts = new Map(
+  categories.map((category) => [
+    category.id,
+    illustrations.filter((item) => item.category === category.id).length,
+  ]),
+)
 
 function Home() {
   const search = Route.useSearch()
@@ -108,7 +114,7 @@ function Home() {
                 <span>01</span> Choose an illustration
               </li>
               <li>
-                <span>02</span> Attach scene + photo
+                <span>02</span> Attach illustration + photo
               </li>
               <li>
                 <span>03</span> Paste the prompt
@@ -174,8 +180,10 @@ function Home() {
                 category: undefined,
               })}
               className={!search.category ? 'is-active' : undefined}
+              aria-current={!search.category ? 'page' : undefined}
             >
-              All illustrations
+              <span>All</span>
+              <small>{illustrations.length}</small>
             </Link>
             {categories.map((category) => (
               <Link
@@ -190,21 +198,22 @@ function Home() {
                 className={
                   search.category === category.id ? 'is-active' : undefined
                 }
+                aria-current={
+                  search.category === category.id ? 'page' : undefined
+                }
               >
-                {category.title}
+                <span>{category.title}</span>
+                <small>{categoryCounts.get(category.id)}</small>
               </Link>
             ))}
           </div>
 
           <div className="filter-summary">
-            <div>
-              <SlidersHorizontal aria-hidden="true" />
-              <span aria-live="polite">
-                <strong>{filtered.length}</strong>{' '}
-                {filtered.length === 1 ? 'scene' : 'scenes'}
-                {selectedCategory ? ` in ${selectedCategory.title}` : ''}
-              </span>
-            </div>
+            <span className="result-count" aria-live="polite">
+              <strong>{filtered.length}</strong>{' '}
+              {filtered.length === 1 ? 'illustration' : 'illustrations'}
+              {selectedCategory ? ` in ${selectedCategory.title}` : ''}
+            </span>
             <label className="availability-toggle">
               <input
                 type="checkbox"
@@ -221,7 +230,7 @@ function Home() {
                 }
               />
               <span aria-hidden="true" />
-              Originals available
+              Originals only
             </label>
             {hasFilters ? (
               <button
@@ -247,7 +256,7 @@ function Home() {
           </section>
         ) : (
           <section className="empty-results" aria-live="polite">
-            <h2>No scene matches that search.</h2>
+            <h2>No illustration matches that search.</h2>
             <p>
               Try a broader phrase, another category, or include artwork still
               awaiting its original.

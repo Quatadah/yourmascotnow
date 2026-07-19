@@ -46,7 +46,7 @@ test('browses, searches, and filters the 80-illustration catalog', async ({
     .filter({ hasText: 'Portfolio' })
     .click()
   await expect(page).toHaveURL(/category=portfolio/)
-  await expect(page.getByText('18 scenes in Portfolio')).toBeVisible()
+  await expect(page.getByText('18 illustrations in Portfolio')).toBeVisible()
   await expect(
     page.locator('.illustration-card > .card-caption > .copy-prompt'),
   ).toHaveCount(18)
@@ -208,7 +208,7 @@ test('shares an available-only view of the complete collection', async ({
   await page.locator('.availability-toggle').click()
   await expect(page).toHaveURL(/available=true/)
   await expect(page.locator('.illustration-card')).toHaveCount(80)
-  await expect(page.getByLabel('Originals available')).toBeChecked()
+  await expect(page.getByLabel('Originals only')).toBeChecked()
 })
 
 test('supports the search keyboard shortcut', async ({ page }) => {
