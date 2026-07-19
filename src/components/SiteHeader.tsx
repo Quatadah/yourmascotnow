@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
 
 import { categories } from '#/data/catalog'
+import { ThemeToggle } from './ThemeToggle'
 
 export function SiteHeader() {
   return (
@@ -28,13 +29,10 @@ export function SiteHeader() {
           </Link>
         ))}
       </nav>
-      <Link
-        to="/"
-        search={{ q: '', available: false }}
-        className="header-index"
-      >
-        Browse 001—080
-      </Link>
+      <div className="header-tools">
+        <span className="header-index">80 scenes</span>
+        <ThemeToggle />
+      </div>
     </header>
   )
 }

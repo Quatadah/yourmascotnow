@@ -4,6 +4,7 @@ import { useState } from 'react'
 
 import { IllustrationArtwork } from '#/components/IllustrationArtwork'
 import { IllustrationCard } from '#/components/IllustrationCard'
+import { CopyPromptButton } from '#/components/CopyPromptButton'
 import { SiteHeader } from '#/components/SiteHeader'
 import {
   getAdjacentIllustrations,
@@ -171,6 +172,26 @@ function IllustrationDetail() {
             </p>
           </div>
         </article>
+
+        <section className="prompt-panel" aria-labelledby="prompt-title">
+          <div className="prompt-panel-intro">
+            <span className="prompt-number">Your character recipe</span>
+            <h2 id="prompt-title">Recreate this scene with your own photo.</h2>
+            <p>
+              Upload a clear portrait to ChatGPT Images, then paste this prompt.
+              The scene stays consistent while the mascot takes on your
+              identity.
+            </p>
+            <CopyPromptButton prompt={illustration.prompt} />
+          </div>
+          <div className="prompt-copy-wrap">
+            <div className="prompt-copy-label">
+              <span>Prompt / {illustration.proofCode}</span>
+              <span>{illustration.prompt.length} characters</span>
+            </div>
+            <p className="prompt-copy">{illustration.prompt}</p>
+          </div>
+        </section>
 
         <nav className="proof-pagination" aria-label="Adjacent illustrations">
           {previous ? (

@@ -13,6 +13,8 @@ import {
 import { SiteHeader } from '#/components/SiteHeader'
 import appCss from '../styles.css?url'
 
+const themeBootScript = `(function(){try{var t=localStorage.getItem('ymn-theme');var d=t==='dark'||t==='light'?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=d;document.querySelector('meta[name="theme-color"]')?.setAttribute('content',d==='dark'?'#111613':'#eef1ec')}catch(e){document.documentElement.dataset.theme='light'}})()`
+
 export const Route = createRootRoute({
   head: () => ({
     meta: [
@@ -39,9 +41,10 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <HeadContent />
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
       </head>
       <body>
         <a className="skip-link" href="#main-content">

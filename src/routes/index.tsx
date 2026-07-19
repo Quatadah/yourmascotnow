@@ -10,6 +10,7 @@ import { z } from 'zod'
 
 import { IllustrationArtwork } from '#/components/IllustrationArtwork'
 import { IllustrationCard } from '#/components/IllustrationCard'
+import { CopyPromptButton } from '#/components/CopyPromptButton'
 import { SiteHeader } from '#/components/SiteHeader'
 import {
   categories,
@@ -86,35 +87,47 @@ function Home() {
       <main id="main-content">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <span className="proof-kicker">First edition · 001—080</span>
+            <span className="proof-kicker">80 scenes · SVG + prompt</span>
             <h1 id="hero-title">
-              80 ways to say it
-              <span>without saying a word.</span>
+              Pick a scene.
+              <span>Make the mascot yours.</span>
             </h1>
             <p>
-              A growing library of hand-drawn mascot moments, indexed for the
-              interfaces, launches, and awkward little states that need
-              character.
+              Upload your photo, choose an illustration, and copy its recipe
+              prompt. You get the same scene and hand-drawn character language,
+              rebuilt around your own face.
             </p>
-            <a href="#catalog" className="text-link">
-              Open the contact sheet <span aria-hidden="true">↓</span>
+            <ol className="hero-steps" aria-label="How it works">
+              <li>
+                <span>01</span> Choose a scene
+              </li>
+              <li>
+                <span>02</span> Upload your photo
+              </li>
+              <li>
+                <span>03</span> Paste the prompt
+              </li>
+            </ol>
+            <a href="#catalog" className="action action--primary hero-action">
+              Browse all 80 scenes <span aria-hidden="true">↓</span>
             </a>
           </div>
 
           <div
             className="hero-proof"
-            aria-label={`Featured proof: ${featured.title}`}
+            aria-label={`Featured mascot recipe: ${featured.title}`}
           >
             <div className="hero-proof-meta">
+              <span>Featured recipe</span>
               <span>{featured.proofCode}</span>
-              <span>
-                {featured.available ? 'Original filed' : 'Original pending'}
-              </span>
             </div>
             <IllustrationArtwork illustration={featured} eager />
             <div className="hero-proof-caption">
-              <span>{String(featured.id).padStart(3, '0')}</span>
-              <strong>{featured.title}</strong>
+              <div>
+                <span>Scene {String(featured.id).padStart(3, '0')}</span>
+                <strong>{featured.title}</strong>
+              </div>
+              <CopyPromptButton prompt={featured.prompt} compact />
             </div>
           </div>
         </section>
@@ -182,7 +195,7 @@ function Home() {
               <SlidersHorizontal aria-hidden="true" />
               <span aria-live="polite">
                 <strong>{filtered.length}</strong>{' '}
-                {filtered.length === 1 ? 'proof' : 'proofs'}
+                {filtered.length === 1 ? 'scene' : 'scenes'}
                 {selectedCategory ? ` in ${selectedCategory.title}` : ''}
               </span>
             </div>
@@ -229,7 +242,7 @@ function Home() {
         ) : (
           <section className="empty-results" aria-live="polite">
             <span className="proof-kicker">YM/SEARCH/000</span>
-            <h2>No proof carries those marks.</h2>
+            <h2>No scene matches that search.</h2>
             <p>
               Try a broader phrase, another category, or include artwork still
               awaiting its original.

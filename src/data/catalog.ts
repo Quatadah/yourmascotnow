@@ -29,6 +29,7 @@ export type Illustration = {
   asset: IllustrationAsset | null
   available: boolean
   proofCode: string
+  prompt: string
 }
 
 export type Category = {
@@ -84,6 +85,10 @@ export function slugify(value: string) {
     .replace(/(^-|-$)/g, '')
 }
 
+export function createMascotPrompt(title: string) {
+  return `Use my uploaded portrait as the identity reference and turn me into the character in this scene: “${title}”. Keep my face recognizable—preserve my facial structure, hairstyle, facial hair, skin-tone cues, and distinctive accessories—while translating me into a bold black-and-white hand-drawn marker mascot. Match the reference composition, pose, expression, camera angle, and object placement exactly. Use slightly imperfect organic outlines, solid black shapes, subtle scratchy hatching, and a clean vector-friendly silhouette. Dress the character in a simple black T-shirt so the collection stays visually consistent. One character, one dominant idea, no written words, no logos, no border, and no extra background elements. Center the complete figure with comfortable, even margins on a square white or transparent canvas. Do not copy the original mascot’s facial identity; replace it with mine.`
+}
+
 export const illustrations: ReadonlyArray<Illustration> = catalogSource.map(
   (entry) => {
     const category = entry.category as CategoryId
@@ -103,6 +108,7 @@ export const illustrations: ReadonlyArray<Illustration> = catalogSource.map(
       asset,
       available: asset !== null,
       proofCode: `YM/${categoryMeta.proofCode}/${String(entry.id).padStart(3, '0')}`,
+      prompt: createMascotPrompt(entry.title),
     }
   },
 )

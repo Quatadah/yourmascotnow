@@ -37,6 +37,17 @@ describe('illustration catalog', () => {
     ).toBe(true)
   })
 
+  it('provides a photo-to-mascot prompt for every illustration', () => {
+    expect(
+      illustrations.every(
+        (item) =>
+          item.prompt.includes(item.title) &&
+          item.prompt.includes('uploaded portrait') &&
+          item.prompt.length > 500,
+      ),
+    ).toBe(true)
+  })
+
   it('finds illustrations by canonical slug', () => {
     expect(getIllustration('mascot-waving-hello')?.proofCode).toBe('YM/01/001')
   })
