@@ -80,6 +80,7 @@ test('opens a dedicated illustration and traverses to the next item', async ({
   await expect(
     page.getByRole('heading', { name: 'Mascot waving hello' }),
   ).toBeVisible()
+  await expect(page.locator('.detail-specs')).toHaveCount(0)
   await expect(
     page.getByRole('heading', {
       name: /Recreate this scene with your own photo/i,

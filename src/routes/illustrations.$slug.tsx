@@ -106,21 +106,6 @@ function IllustrationDetail() {
             <h1>{illustration.title}</h1>
             <p>{illustration.alt}</p>
 
-            <dl className="detail-specs">
-              <div>
-                <dt>Status</dt>
-                <dd>
-                  {illustration.available
-                    ? 'Original available'
-                    : 'Awaiting original'}
-                </dd>
-              </div>
-              <div>
-                <dt>Series</dt>
-                <dd>{category.range}</dd>
-              </div>
-            </dl>
-
             <div className="detail-actions">
               {illustration.asset ? (
                 <>

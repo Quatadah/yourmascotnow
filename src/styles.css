@@ -254,7 +254,6 @@ svg {
 .hero-proof-meta,
 .detail-toolbar,
 .category-stamp,
-.detail-specs,
 .rights-note {
   font-family: var(--font-utility);
   text-transform: uppercase;
@@ -985,35 +984,6 @@ button.action {
   font-size: 1rem;
 }
 
-.detail-specs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
-  margin: var(--space-xl) 0;
-  padding-block: var(--space-md);
-  border: 1px solid var(--rule-strong);
-  border-inline: 0;
-}
-
-.detail-specs div {
-  display: grid;
-  gap: var(--space-xs);
-}
-
-.detail-specs dt {
-  color: var(--graphite);
-  font-size: 0.55rem;
-  font-weight: 680;
-  letter-spacing: 0.1em;
-}
-
-.detail-specs dd {
-  margin: 0;
-  font-size: 0.65rem;
-  font-weight: 720;
-  letter-spacing: 0.04em;
-}
-
 .detail-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1268,10 +1238,6 @@ button.action {
 @media (max-width: 34rem) {
   .wordmark > span:last-child {
     display: none;
-  }
-
-  .detail-specs {
-    grid-template-columns: 1fr;
   }
 
   .proof-pagination {
@@ -2497,7 +2463,6 @@ input,
     inset 0 1px 0 var(--surface-highlight);
 }
 
-.detail-specs,
 .proof-pagination {
   padding: 0.35rem;
   background: color-mix(in oklch, var(--panel-muted) 72%, var(--panel));
