@@ -36,6 +36,9 @@ test('opens a dedicated proof and traverses to the next item', async ({
     page.getByRole('heading', { name: 'Mascot waving hello' }),
   ).toBeVisible()
   await expect(page.getByText('YM/01/001').first()).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: 'Download SVG' }),
+  ).toHaveAttribute('href', /\.svg$/)
   await page.getByRole('link', { name: /Next proof/i }).click()
   await expect(page).toHaveURL(/mascot-introducing-himself-with-an-open-hand/)
 })

@@ -127,13 +127,22 @@ function IllustrationDetail() {
 
             <div className="detail-actions">
               {illustration.asset ? (
-                <a
-                  href={illustration.asset.original}
-                  download
-                  className="action action--primary"
-                >
-                  <Download aria-hidden="true" /> Download original
-                </a>
+                <>
+                  <a
+                    href={illustration.asset.vector}
+                    download
+                    className="action action--primary"
+                  >
+                    <Download aria-hidden="true" /> Download SVG
+                  </a>
+                  <a
+                    href={illustration.asset.original}
+                    download
+                    className="action action--secondary"
+                  >
+                    <Download aria-hidden="true" /> Source PNG
+                  </a>
+                </>
               ) : (
                 <span className="action action--disabled" aria-disabled="true">
                   <Download aria-hidden="true" /> Original pending

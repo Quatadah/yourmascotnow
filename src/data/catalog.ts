@@ -14,6 +14,7 @@ export type IllustrationAsset = {
   original: string
   previewSmall: string
   previewLarge: string
+  vector: string
   width: number
   height: number
   extension: string

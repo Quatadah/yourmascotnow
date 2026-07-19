@@ -21,13 +21,16 @@ The app runs at `http://localhost:3000`.
 
 ## Illustration assets
 
-The catalog contains all 80 illustrations recovered from the original ChatGPT image conversation. Items 001–010 are the individual 1254px exports. Later responses were delivered as contact sheets, so their original sheets are preserved in `assets/chatgpt-source/` and reproducibly separated into individual, title-free 960px PNGs by `scripts/extract-chatgpt-sheets.mjs`.
+The catalog contains all 80 illustrations recovered from the original ChatGPT image conversation. Items 001–010 are the individual 1254px exports. Later responses were delivered as contact sheets, so their original sheets are preserved in `assets/chatgpt-source/` and reproducibly separated into individual, title-free PNGs by `scripts/extract-chatgpt-sheets.mjs`.
+
+Every illustration also has a true traced SVG. The vector pipeline thresholds the black marker art, crops to its actual ink bounds, recenters it on a consistent square safe area, and converts the result to editable resolution-independent paths with Potrace. The gallery displays these SVGs so large proofs remain sharp; the source PNG is retained separately for provenance.
 
 To rebuild the extracted set and responsive gallery assets:
 
 ```bash
 pnpm assets:extract-chatgpt
 pnpm assets:sync
+pnpm assets:vectorize
 ```
 
 The contact-sheet extractor uses reviewed, sheet-specific coordinates instead of directory order or image recognition. The embedded labels remain in the preserved source sheets; website titles come from the accessible catalog data.
@@ -46,13 +49,14 @@ Accepted examples:
 mascot-holding-a-code-window.webp
 ```
 
-The synchronizer never maps by directory order. It rejects unknown names and duplicate mappings, preserves a canonically named original in `public/mascots/original/`, and generates 480px and 960px WebP previews in `public/mascots/preview/`. The generated manifest records intrinsic dimensions so the gallery can reserve image space before files load.
+The synchronizer never maps by directory order. It rejects unknown names and duplicate mappings, preserves a canonically named original in `public/mascots/original/`, generates 480px and 960px WebP previews in `public/mascots/preview/`, and writes a normalized SVG to `public/mascots/vector/`. The generated manifest records all public sources and intrinsic raster dimensions.
 
 ## Commands
 
 ```bash
 pnpm assets:extract-chatgpt # Rebuild items 011–080 from preserved source sheets
 pnpm assets:sync  # Import supplied artwork and generate responsive previews
+pnpm assets:vectorize # Rebuild all normalized SVGs from preserved source PNGs
 pnpm typecheck    # TypeScript validation
 pnpm lint         # ESLint
 pnpm check        # Prettier verification

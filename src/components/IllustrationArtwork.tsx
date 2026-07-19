@@ -11,16 +11,12 @@ export function IllustrationArtwork({
 }: IllustrationArtworkProps) {
   if (illustration.asset) {
     return (
-      <picture className="artwork-picture">
-        <source
-          srcSet={`${illustration.asset.previewSmall} 480w, ${illustration.asset.previewLarge} 960w`}
-          type="image/webp"
-        />
+      <picture className="artwork-picture artwork-picture--vector">
         <img
-          src={illustration.asset.previewLarge}
+          src={illustration.asset.vector}
           alt={illustration.alt}
-          width={illustration.asset.width}
-          height={illustration.asset.height}
+          width="1200"
+          height="1200"
           loading={eager ? 'eager' : 'lazy'}
           fetchPriority={eager ? 'high' : 'auto'}
         />

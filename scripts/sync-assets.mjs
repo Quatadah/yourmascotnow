@@ -5,11 +5,13 @@ import process from 'node:process'
 import sharp from 'sharp'
 
 import { matchCatalogEntry, slugifyAsset } from './asset-utils.mjs'
+import { writeNormalizedSvg } from './vector-utils.mjs'
 
 const root = process.cwd()
 const incomingDirectory = path.join(root, 'assets', 'incoming')
 const originalDirectory = path.join(root, 'public', 'mascots', 'original')
 const previewDirectory = path.join(root, 'public', 'mascots', 'preview')
+const vectorDirectory = path.join(root, 'public', 'mascots', 'vector')
 const catalogPath = path.join(root, 'src', 'data', 'catalog.json')
 const manifestPath = path.join(root, 'src', 'data', 'assets.generated.json')
 const supportedExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp'])
@@ -18,6 +20,7 @@ await Promise.all([
   mkdir(incomingDirectory, { recursive: true }),
   mkdir(originalDirectory, { recursive: true }),
   mkdir(previewDirectory, { recursive: true }),
+  mkdir(vectorDirectory, { recursive: true }),
 ])
 
 const [catalog, currentManifest, filenames] = await Promise.all([
@@ -78,6 +81,7 @@ for (const entry of catalog) {
   const canonicalOriginal = `${stem}${extension}`
   const smallPreview = `${stem}-480.webp`
   const largePreview = `${stem}-960.webp`
+  const vectorArtwork = `${stem}.svg`
   const metadata = await sharp(sourcePath).metadata()
 
   if (!metadata.width || !metadata.height) {
@@ -104,12 +108,18 @@ for (const entry of catalog) {
       })
       .webp({ quality: 88, effort: 5 })
       .toFile(path.join(previewDirectory, largePreview)),
+    writeNormalizedSvg(
+      sourcePath,
+      path.join(vectorDirectory, vectorArtwork),
+      entry.title,
+    ),
   ])
 
   nextManifest[String(entry.id)] = {
     original: `/mascots/original/${canonicalOriginal}`,
     previewSmall: `/mascots/preview/${smallPreview}`,
     previewLarge: `/mascots/preview/${largePreview}`,
+    vector: `/mascots/vector/${vectorArtwork}`,
     width: metadata.width,
     height: metadata.height,
     extension: extension.slice(1),

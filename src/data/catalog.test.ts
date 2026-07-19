@@ -31,6 +31,12 @@ describe('illustration catalog', () => {
     ).toEqual([16, 12, 18, 34])
   })
 
+  it('provides a normalized SVG for every illustration', () => {
+    expect(
+      illustrations.every((item) => item.asset?.vector.endsWith('.svg')),
+    ).toBe(true)
+  })
+
   it('finds illustrations by canonical slug', () => {
     expect(getIllustration('mascot-waving-hello')?.proofCode).toBe('YM/01/001')
   })
