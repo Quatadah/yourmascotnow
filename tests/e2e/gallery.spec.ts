@@ -48,6 +48,9 @@ test('opens a dedicated proof and traverses to the next item', async ({
   await expect(
     page.getByRole('link', { name: 'Download SVG' }),
   ).toHaveAttribute('href', /\.svg$/)
+  await expect(
+    page.getByRole('button', { name: 'Current color SVG' }),
+  ).toBeVisible()
   await page.getByRole('link', { name: /Next proof/i }).click()
   await expect(page).toHaveURL(/mascot-introducing-himself-with-an-open-hand/)
 })
@@ -55,11 +58,47 @@ test('opens a dedicated proof and traverses to the next item', async ({
 test('persists the selected color theme', async ({ page }) => {
   await page.getByRole('button', { name: 'Switch to dark mode' }).click()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+  await expect(page.locator('.artwork-color-layer').first()).toHaveCSS(
+    'background-color',
+    'rgb(247, 248, 242)',
+  )
+  await expect(page.locator('.card-artwork').first()).toHaveCSS(
+    'background-color',
+    'rgb(17, 22, 19)',
+  )
 
   await page.reload()
   await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
   await expect(
     page.getByRole('button', { name: 'Switch to light mode' }),
+  ).toBeVisible()
+})
+
+test('applies custom color to artwork and copied prompts', async ({
+  context,
+  page,
+}) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write'])
+  const colorPicker = page.getByLabel('Choose mascot color')
+  await colorPicker.fill('#e6492d')
+
+  await expect(page.locator('html')).toHaveAttribute(
+    'data-mascot-color',
+    'custom',
+  )
+  await expect(page.locator('.artwork-color-layer').first()).toHaveCSS(
+    'background-color',
+    'rgb(230, 73, 45)',
+  )
+
+  await page.locator('.card-recipe .copy-prompt').first().click()
+  const copiedPrompt = await page.evaluate(() => navigator.clipboard.readText())
+  expect(copiedPrompt).toContain('#e6492d')
+
+  await page.reload()
+  await expect(colorPicker).toHaveValue('#e6492d')
+  await expect(
+    page.getByRole('button', { name: 'Reset mascot color to theme' }),
   ).toBeVisible()
 })
 

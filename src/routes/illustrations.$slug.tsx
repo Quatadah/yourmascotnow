@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { IllustrationArtwork } from '#/components/IllustrationArtwork'
 import { IllustrationCard } from '#/components/IllustrationCard'
 import { CopyPromptButton } from '#/components/CopyPromptButton'
+import { ColorizedSvgDownload } from '#/components/ColorizedSvgDownload'
 import { SiteHeader } from '#/components/SiteHeader'
 import {
   getAdjacentIllustrations,
@@ -12,6 +13,7 @@ import {
   getIllustration,
   illustrations,
 } from '#/data/catalog'
+import { useColorAwarePrompt } from '#/lib/mascotAppearance'
 
 export const Route = createFileRoute('/illustrations/$slug')({
   loader: ({ params }) => {
@@ -47,6 +49,7 @@ export const Route = createFileRoute('/illustrations/$slug')({
 
 function IllustrationDetail() {
   const illustration = Route.useLoaderData()
+  const colorAwarePrompt = useColorAwarePrompt(illustration.prompt)
   const category = getCategory(illustration.category)
   const { previous, next } = getAdjacentIllustrations(illustration)
   const [copyState, setCopyState] = useState<'idle' | 'copied' | 'failed'>(
@@ -136,6 +139,7 @@ function IllustrationDetail() {
                   >
                     <Download aria-hidden="true" /> Download SVG
                   </a>
+                  <ColorizedSvgDownload illustration={illustration} />
                   <a
                     href={illustration.asset.original}
                     download
@@ -187,9 +191,9 @@ function IllustrationDetail() {
           <div className="prompt-copy-wrap">
             <div className="prompt-copy-label">
               <span>Prompt / {illustration.proofCode}</span>
-              <span>{illustration.prompt.length} characters</span>
+              <span>{colorAwarePrompt.length} characters</span>
             </div>
-            <p className="prompt-copy">{illustration.prompt}</p>
+            <p className="prompt-copy">{colorAwarePrompt}</p>
           </div>
         </section>
 

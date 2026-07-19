@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
 
 import { categories } from '#/data/catalog'
+import { MascotColorPicker } from './MascotColorPicker'
 import { ThemeToggle } from './ThemeToggle'
 
 export function SiteHeader() {
@@ -31,6 +32,7 @@ export function SiteHeader() {
       </nav>
       <div className="header-tools">
         <span className="header-index">80 scenes</span>
+        <MascotColorPicker />
         <ThemeToggle />
       </div>
     </header>

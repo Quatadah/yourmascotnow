@@ -2,7 +2,7 @@
 
 A public, searchable character-recipe library for the first 80 hand-drawn Your Mascot Now illustrations. The collection covers identity, biography, portfolio, and software development, with a dedicated page, shareable URL, SVG download, and photo-to-mascot prompt for every scene.
 
-Visitors can upload their portrait to ChatGPT Images and paste the scene-specific prompt to recreate an illustration around their own recognizable identity. Every card exposes a one-click prompt action; detail pages show the complete prompt and usage instructions. The interface supports persistent light and dark modes.
+Visitors can upload their portrait to ChatGPT Images and paste the scene-specific prompt to recreate an illustration around their own recognizable identity. Every card exposes a one-click prompt action; detail pages show the complete prompt and usage instructions. The interface supports persistent light and dark modes, automatically reverses the mascot ink with the theme, and provides a native full-spectrum color picker for custom ink colors. Custom colors use a contrast-safe canvas, persist locally, flow into copied prompts, and can be exported as a colored SVG.
 
 ## Stack
 

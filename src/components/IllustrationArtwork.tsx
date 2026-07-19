@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
 import type { Illustration } from '#/data/catalog'
 
 type IllustrationArtworkProps = {
@@ -9,18 +11,42 @@ export function IllustrationArtwork({
   illustration,
   eager = false,
 }: IllustrationArtworkProps) {
+  const artworkRef = useRef<HTMLSpanElement>(null)
+  const [shouldLoad, setShouldLoad] = useState(eager)
+
+  useEffect(() => {
+    if (eager || shouldLoad || !artworkRef.current) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '500px' },
+    )
+
+    observer.observe(artworkRef.current)
+    return () => observer.disconnect()
+  }, [eager, shouldLoad])
+
   if (illustration.asset) {
+    const artworkStyle = {
+      '--artwork-src': shouldLoad
+        ? `url("${illustration.asset.vector}")`
+        : 'none',
+    } as CSSProperties
+
     return (
-      <picture className="artwork-picture artwork-picture--vector">
-        <img
-          src={illustration.asset.vector}
-          alt={illustration.alt}
-          width="1200"
-          height="1200"
-          loading={eager ? 'eager' : 'lazy'}
-          fetchPriority={eager ? 'high' : 'auto'}
-        />
-      </picture>
+      <span
+        className={`artwork-picture artwork-picture--vector${eager ? ' is-eager' : ''}`}
+        role="img"
+        aria-label={illustration.alt}
+        ref={artworkRef}
+      >
+        <span className="artwork-color-layer" style={artworkStyle} />
+      </span>
     )
   }
 

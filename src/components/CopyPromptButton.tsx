@@ -1,6 +1,8 @@
 import { Check, Copy } from 'lucide-react'
 import { useState } from 'react'
 
+import { getColorAwarePrompt } from '#/lib/mascotAppearance'
+
 type CopyPromptButtonProps = {
   prompt: string
   compact?: boolean
@@ -14,7 +16,7 @@ export function CopyPromptButton({
 
   const copyPrompt = async () => {
     try {
-      await navigator.clipboard.writeText(prompt)
+      await navigator.clipboard.writeText(getColorAwarePrompt(prompt))
       setState('copied')
       window.setTimeout(() => setState('idle'), 1800)
     } catch {

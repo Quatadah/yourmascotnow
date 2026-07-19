@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import { appearanceChangeEvent } from '#/lib/mascotAppearance'
+
 type Theme = 'light' | 'dark'
 
 const storageKey = 'ymn-theme'
@@ -21,6 +23,7 @@ export function ThemeToggle() {
       .querySelector('meta[name="theme-color"]')
       ?.setAttribute('content', nextTheme === 'dark' ? '#111613' : '#eef1ec')
     setTheme(nextTheme)
+    window.dispatchEvent(new CustomEvent(appearanceChangeEvent))
   }
 
   return (

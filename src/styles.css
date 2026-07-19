@@ -5,6 +5,9 @@
   --panel: oklch(1 0 0);
   --panel-muted: oklch(0.965 0.007 145);
   --art-paper: oklch(0.99 0.002 145);
+  --mascot-ink-auto: #171916;
+  --mascot-ink: var(--mascot-ink-user, var(--mascot-ink-auto));
+  --artwork-surface: var(--art-paper-user, var(--art-paper));
   --ink: oklch(0.19 0.012 145);
   --graphite: oklch(0.45 0.018 145);
   --blue: oklch(0.57 0.19 257);
@@ -40,6 +43,8 @@
   --desk: oklch(0.115 0.014 145);
   --panel: oklch(0.205 0.014 145);
   --panel-muted: oklch(0.235 0.014 145);
+  --art-paper: #111613;
+  --mascot-ink-auto: #f7f8f2;
   --ink: oklch(0.94 0.008 145);
   --graphite: oklch(0.72 0.015 145);
   --blue: oklch(0.68 0.16 257);
@@ -381,6 +386,7 @@ svg {
 
 .artwork-picture,
 .artwork-picture img,
+.artwork-color-layer,
 .artwork-placeholder {
   width: 100%;
   height: 100%;
@@ -389,6 +395,13 @@ svg {
 .artwork-picture {
   display: block;
   overflow: hidden;
+}
+
+.artwork-color-layer {
+  display: block;
+  background: var(--mascot-ink);
+  -webkit-mask: var(--artwork-src) center / contain no-repeat;
+  mask: var(--artwork-src) center / contain no-repeat;
 }
 
 .artwork-picture img {
@@ -428,13 +441,13 @@ svg {
 }
 
 .ink-light {
-  stroke: var(--ink);
+  stroke: var(--mascot-ink);
   stroke-width: 5;
 }
 
 .ink-heavy {
-  fill: var(--ink);
-  stroke: var(--ink);
+  fill: var(--mascot-ink);
+  stroke: var(--mascot-ink);
   stroke-width: 4;
 }
 
@@ -1361,6 +1374,79 @@ input,
   justify-self: end;
 }
 
+.mascot-color-control {
+  display: flex;
+  align-items: stretch;
+  min-height: 1.8rem;
+  background: var(--panel-muted);
+  border: 1px solid var(--rule-strong);
+}
+
+.mascot-color-control label {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  padding-left: 0.45rem;
+  color: var(--graphite);
+  font-family: var(--font-utility);
+  font-size: 0.52rem;
+  font-weight: 740;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.mascot-color-control input[type='color'] {
+  width: 1.7rem;
+  min-width: 1.7rem;
+  height: 100%;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--rule-strong);
+}
+
+.mascot-color-control input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0.26rem;
+}
+
+.mascot-color-control input[type='color']::-webkit-color-swatch {
+  border: 1px solid var(--rule-strong);
+  border-radius: 0;
+}
+
+.mascot-color-auto,
+.mascot-color-reset {
+  display: grid;
+  min-width: 2.25rem;
+  padding-inline: 0.35rem;
+  color: var(--graphite);
+  font-family: var(--font-utility);
+  font-size: 0.48rem;
+  font-weight: 720;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--rule);
+  place-items: center;
+}
+
+.mascot-color-reset {
+  cursor: pointer;
+}
+
+.mascot-color-reset:hover {
+  color: var(--paper);
+  background: var(--blue-dark);
+}
+
+.mascot-color-reset svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
 .header-index {
   color: var(--graphite);
 }
@@ -1485,7 +1571,7 @@ input,
 .hero-proof > .artwork-picture,
 .hero-proof > .artwork-placeholder {
   min-height: 0;
-  background: var(--art-paper);
+  background: var(--artwork-surface);
 }
 
 .hero-proof-caption {
@@ -1573,7 +1659,7 @@ input,
 .card-artwork,
 .illustration-card--featured .card-artwork {
   aspect-ratio: 1;
-  background: var(--art-paper);
+  background: var(--artwork-surface);
   border-bottom: 1px solid var(--rule-strong);
 }
 
@@ -1688,7 +1774,7 @@ input,
 }
 
 .detail-proof {
-  background: var(--art-paper);
+  background: var(--artwork-surface);
   box-shadow: 0.5rem 0.5rem 0 var(--card-shadow);
 }
 
