@@ -2612,6 +2612,7 @@ body {
 }
 
 .site-header {
+  grid-template-columns: minmax(0, 1fr) auto;
   border-radius: 0;
 }
 

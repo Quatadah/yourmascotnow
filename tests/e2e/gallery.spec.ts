@@ -14,6 +14,7 @@ test('browses, searches, and filters the 80-illustration catalog', async ({
   ).toBeVisible()
   await expect(page.locator('.illustration-card')).toHaveCount(80)
   await expect(page.locator('.availability-dot')).toHaveCount(0)
+  await expect(page.locator('.header-nav')).toHaveCount(0)
   await expect(page.locator('.illustration-card').first()).not.toContainText(
     'YM/',
   )
