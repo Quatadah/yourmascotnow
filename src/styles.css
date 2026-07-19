@@ -3922,8 +3922,21 @@ body {
 }
 
 .search-wrap input {
+  appearance: none;
   font-size: 0.86rem;
   font-weight: 560;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+.search-wrap input::-webkit-search-decoration,
+.search-wrap input::-webkit-search-cancel-button,
+.search-wrap input::-webkit-search-results-button,
+.search-wrap input::-webkit-search-results-decoration {
+  appearance: none;
 }
 
 .search-wrap > svg {
