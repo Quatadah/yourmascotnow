@@ -93,16 +93,16 @@ function Home() {
               <span>Make the mascot yours.</span>
             </h1>
             <p>
-              Upload your photo, choose an illustration, and copy its recipe
-              prompt. You get the same scene and hand-drawn character language,
-              rebuilt around your own face.
+              Choose an illustration, attach it with your portrait, then paste
+              its recipe prompt. The scene and drawing style stay consistent
+              while the mascot takes on your recognizable traits.
             </p>
             <ol className="hero-steps" aria-label="How it works">
               <li>
                 <span>01</span> Choose a scene
               </li>
               <li>
-                <span>02</span> Upload your photo
+                <span>02</span> Attach scene + photo
               </li>
               <li>
                 <span>03</span> Paste the prompt

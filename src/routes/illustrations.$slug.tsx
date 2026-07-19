@@ -174,9 +174,9 @@ function IllustrationDetail() {
             <span className="prompt-number">Your character recipe</span>
             <h2 id="prompt-title">Recreate this scene with your own photo.</h2>
             <p>
-              Upload a clear portrait to ChatGPT Images, then paste this prompt.
-              The scene stays consistent while the mascot takes on your
-              identity.
+              Attach this illustration and a clear portrait to ChatGPT Images,
+              then paste the prompt. The illustration controls the scene and
+              style; your portrait controls the mascot’s identity.
             </p>
             <CopyPromptButton prompt={illustration.prompt} />
           </div>

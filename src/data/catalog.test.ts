@@ -42,8 +42,13 @@ describe('illustration catalog', () => {
       illustrations.every(
         (item) =>
           item.prompt.includes(item.title) &&
-          item.prompt.includes('uploaded portrait') &&
-          item.prompt.length > 500,
+          item.prompt.includes('SCENE REFERENCE') &&
+          item.prompt.includes('IDENTITY REFERENCE') &&
+          item.prompt.includes('Do not invent facial hair') &&
+          item.prompt.includes(
+            'Match the reference’s bold hand-drawn marker',
+          ) &&
+          item.prompt.length > 1_500,
       ),
     ).toBe(true)
   })

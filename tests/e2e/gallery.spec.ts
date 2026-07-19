@@ -67,9 +67,7 @@ test('opens a dedicated illustration and traverses to the next item', async ({
       name: /Recreate this scene with your own photo/i,
     }),
   ).toBeVisible()
-  await expect(page.locator('.prompt-copy')).toContainText(
-    'Use my uploaded portrait',
-  )
+  await expect(page.locator('.prompt-copy')).toContainText('SCENE REFERENCE')
   await expect(
     page.getByRole('link', { name: 'Download SVG' }),
   ).toHaveAttribute('href', /\.svg$/)
@@ -142,7 +140,9 @@ test('copies the photo-to-mascot recipe from a gallery card', async ({
   await expect(copyButton).toContainText('Prompt copied')
 
   const copiedPrompt = await page.evaluate(() => navigator.clipboard.readText())
-  expect(copiedPrompt).toContain('Use my uploaded portrait')
+  expect(copiedPrompt).toContain('SCENE REFERENCE')
+  expect(copiedPrompt).toContain('IDENTITY REFERENCE')
+  expect(copiedPrompt).toContain('Do not invent facial hair')
   expect(copiedPrompt).toContain('Mascot waving hello')
 })
 
