@@ -18,7 +18,6 @@ export function SiteHeader() {
         <span>Your Mascot Now</span>
       </Link>
       <div className="header-tools">
-        <span className="header-index">80 scenes</span>
         <MascotColorPicker />
         <ThemeToggle />
       </div>

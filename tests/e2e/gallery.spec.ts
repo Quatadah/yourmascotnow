@@ -15,6 +15,10 @@ test('browses, searches, and filters the 80-illustration catalog', async ({
   await expect(page.locator('.illustration-card')).toHaveCount(80)
   await expect(page.locator('.availability-dot')).toHaveCount(0)
   await expect(page.locator('.header-nav')).toHaveCount(0)
+  await expect(page.locator('.header-index')).toHaveCount(0)
+  await expect(
+    page.getByRole('button', { name: /Choose mascot color/i }),
+  ).toContainText('Color')
   await expect(page.locator('.site-header')).toHaveCSS(
     'background-image',
     'none',
@@ -116,8 +120,16 @@ test('applies custom color to artwork and copied prompts', async ({
   page,
 }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write'])
-  const colorPicker = page.getByLabel('Choose mascot color')
+  const colorTrigger = page.getByRole('button', {
+    name: /Choose mascot color/i,
+  })
+  await colorTrigger.click()
+  await expect(
+    page.getByRole('dialog', { name: 'Mascot color mixer' }),
+  ).toBeVisible()
+  const colorPicker = page.getByLabel('Custom hex color')
   await colorPicker.fill('#e6492d')
+  await colorPicker.press('Enter')
 
   await expect(page.locator('html')).toHaveAttribute(
     'data-mascot-color',
@@ -136,9 +148,10 @@ test('applies custom color to artwork and copied prompts', async ({
   expect(copiedPrompt).toContain('#e6492d')
 
   await page.reload()
+  await colorTrigger.click()
   await expect(colorPicker).toHaveValue('#e6492d')
   await expect(
-    page.getByRole('button', { name: 'Reset mascot color to theme' }),
+    page.getByRole('button', { name: 'Use theme color' }),
   ).toBeVisible()
 })
 
