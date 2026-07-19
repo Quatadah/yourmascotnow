@@ -13,6 +13,10 @@
   --blue: oklch(0.48 0 0);
   --blue-dark: oklch(0.28 0 0);
   --red: oklch(0.44 0 0);
+  --control-primary: oklch(0.25 0 0);
+  --control-primary-hover: oklch(0.32 0 0);
+  --control-primary-border: oklch(0.16 0 0);
+  --control-primary-text: oklch(0.97 0 0);
   --rule: color-mix(in oklch, var(--ink) 20%, transparent);
   --rule-strong: color-mix(in oklch, var(--ink) 58%, transparent);
   --surface-blue: color-mix(in oklch, var(--blue) 7%, var(--paper));
@@ -50,6 +54,10 @@
   --blue: oklch(0.72 0 0);
   --blue-dark: oklch(0.84 0 0);
   --red: oklch(0.72 0 0);
+  --control-primary: oklch(0.27 0 0);
+  --control-primary-hover: oklch(0.34 0 0);
+  --control-primary-border: oklch(0.42 0 0);
+  --control-primary-text: oklch(0.94 0 0);
   --card-shadow: oklch(0 0 0 / 0.4);
   --surface-blue: color-mix(in oklch, var(--blue) 14%, var(--panel));
 }
@@ -2256,13 +2264,13 @@ input,
 
 .action--primary,
 .copy-prompt {
-  color: oklch(0.97 0 0);
+  color: var(--control-primary-text);
   background: linear-gradient(
     180deg,
-    color-mix(in oklch, var(--blue-dark) 90%, white),
-    color-mix(in oklch, var(--blue-dark) 88%, black)
+    color-mix(in oklch, var(--control-primary) 92%, white),
+    color-mix(in oklch, var(--control-primary) 94%, black)
   );
-  border-color: color-mix(in oklch, var(--blue-dark) 72%, var(--ink));
+  border-color: var(--control-primary-border);
   text-shadow: 0 1px 0 oklch(0.2 0 0 / 0.55);
 }
 
@@ -2279,11 +2287,16 @@ input,
 
 .action--primary:hover,
 .copy-prompt:hover {
-  color: oklch(0.98 0 0);
+  color: var(--control-primary-text);
   background: linear-gradient(
     180deg,
-    color-mix(in oklch, var(--blue) 88%, white),
-    color-mix(in oklch, var(--blue-dark) 92%, black)
+    color-mix(in oklch, var(--control-primary-hover) 90%, white),
+    color-mix(in oklch, var(--control-primary-hover) 94%, black)
+  );
+  border-color: color-mix(
+    in oklch,
+    var(--control-primary-border) 82%,
+    var(--ink)
   );
 }
 
