@@ -40,13 +40,13 @@ test('opens a dedicated proof and traverses to the next item', async ({
   await expect(page).toHaveURL(/mascot-introducing-himself-with-an-open-hand/)
 })
 
-test('teaches the empty available-only state', async ({ page }) => {
+test('shares an available-only view of the complete collection', async ({
+  page,
+}) => {
   await page.locator('.availability-toggle').click()
-  await expect(
-    page.getByRole('heading', { name: /No proof carries/i }),
-  ).toBeVisible()
-  await page.getByRole('button', { name: 'Show all 80' }).click()
+  await expect(page).toHaveURL(/available=true/)
   await expect(page.locator('.illustration-card')).toHaveCount(80)
+  await expect(page.getByLabel('Originals available')).toBeChecked()
 })
 
 test('supports the search keyboard shortcut', async ({ page }) => {

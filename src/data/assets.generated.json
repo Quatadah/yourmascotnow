@@ -1,1 +1,642 @@
-{}
+{
+  "1": {
+    "original": "/mascots/original/001-mascot-waving-hello.png",
+    "previewSmall": "/mascots/preview/001-mascot-waving-hello-480.webp",
+    "previewLarge": "/mascots/preview/001-mascot-waving-hello-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "2": {
+    "original": "/mascots/original/002-mascot-introducing-himself-with-an-open-hand.png",
+    "previewSmall": "/mascots/preview/002-mascot-introducing-himself-with-an-open-hand-480.webp",
+    "previewLarge": "/mascots/preview/002-mascot-introducing-himself-with-an-open-hand-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "3": {
+    "original": "/mascots/original/003-mascot-pointing-toward-himself.png",
+    "previewSmall": "/mascots/preview/003-mascot-pointing-toward-himself-480.webp",
+    "previewLarge": "/mascots/preview/003-mascot-pointing-toward-himself-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "4": {
+    "original": "/mascots/original/004-mascot-wearing-a-name-badge.png",
+    "previewSmall": "/mascots/preview/004-mascot-wearing-a-name-badge-480.webp",
+    "previewLarge": "/mascots/preview/004-mascot-wearing-a-name-badge-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "5": {
+    "original": "/mascots/original/005-mascot-holding-a-personal-profile-card.png",
+    "previewSmall": "/mascots/preview/005-mascot-holding-a-personal-profile-card-480.webp",
+    "previewLarge": "/mascots/preview/005-mascot-holding-a-personal-profile-card-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "6": {
+    "original": "/mascots/original/006-mascot-holding-a-logo-symbol.png",
+    "previewSmall": "/mascots/preview/006-mascot-holding-a-logo-symbol-480.webp",
+    "previewLarge": "/mascots/preview/006-mascot-holding-a-logo-symbol-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "7": {
+    "original": "/mascots/original/007-mascot-standing-beside-a-large-logo.png",
+    "previewSmall": "/mascots/preview/007-mascot-standing-beside-a-large-logo-480.webp",
+    "previewLarge": "/mascots/preview/007-mascot-standing-beside-a-large-logo-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "8": {
+    "original": "/mascots/original/008-mascot-drawing-his-own-logo.png",
+    "previewSmall": "/mascots/preview/008-mascot-drawing-his-own-logo-480.webp",
+    "previewLarge": "/mascots/preview/008-mascot-drawing-his-own-logo-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "9": {
+    "original": "/mascots/original/009-mascot-holding-a-signature.png",
+    "previewSmall": "/mascots/preview/009-mascot-holding-a-signature-480.webp",
+    "previewLarge": "/mascots/preview/009-mascot-holding-a-signature-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "10": {
+    "original": "/mascots/original/010-mascot-looking-into-a-mirror.png",
+    "previewSmall": "/mascots/preview/010-mascot-looking-into-a-mirror-480.webp",
+    "previewLarge": "/mascots/preview/010-mascot-looking-into-a-mirror-960.webp",
+    "width": 1254,
+    "height": 1254,
+    "extension": "png"
+  },
+  "11": {
+    "original": "/mascots/original/011-mascot-adjusting-his-sunglasses.png",
+    "previewSmall": "/mascots/preview/011-mascot-adjusting-his-sunglasses-480.webp",
+    "previewLarge": "/mascots/preview/011-mascot-adjusting-his-sunglasses-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "12": {
+    "original": "/mascots/original/012-mascot-standing-confidently-with-crossed-arms.png",
+    "previewSmall": "/mascots/preview/012-mascot-standing-confidently-with-crossed-arms-480.webp",
+    "previewLarge": "/mascots/preview/012-mascot-standing-confidently-with-crossed-arms-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "13": {
+    "original": "/mascots/original/013-mascot-giving-a-thumbs-up.png",
+    "previewSmall": "/mascots/preview/013-mascot-giving-a-thumbs-up-480.webp",
+    "previewLarge": "/mascots/preview/013-mascot-giving-a-thumbs-up-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "14": {
+    "original": "/mascots/original/014-mascot-smiling-with-sparkle-elements.png",
+    "previewSmall": "/mascots/preview/014-mascot-smiling-with-sparkle-elements-480.webp",
+    "previewLarge": "/mascots/preview/014-mascot-smiling-with-sparkle-elements-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "15": {
+    "original": "/mascots/original/015-mascot-peeking-from-behind-a-card.png",
+    "previewSmall": "/mascots/preview/015-mascot-peeking-from-behind-a-card-480.webp",
+    "previewLarge": "/mascots/preview/015-mascot-peeking-from-behind-a-card-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "16": {
+    "original": "/mascots/original/016-mascot-inside-a-circular-profile-frame.png",
+    "previewSmall": "/mascots/preview/016-mascot-inside-a-circular-profile-frame-480.webp",
+    "previewLarge": "/mascots/preview/016-mascot-inside-a-circular-profile-frame-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "17": {
+    "original": "/mascots/original/017-mascot-reading-an-about-document.png",
+    "previewSmall": "/mascots/preview/017-mascot-reading-an-about-document-480.webp",
+    "previewLarge": "/mascots/preview/017-mascot-reading-an-about-document-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "18": {
+    "original": "/mascots/original/018-mascot-pointing-toward-a-timeline.png",
+    "previewSmall": "/mascots/preview/018-mascot-pointing-toward-a-timeline-480.webp",
+    "previewLarge": "/mascots/preview/018-mascot-pointing-toward-a-timeline-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "19": {
+    "original": "/mascots/original/019-mascot-holding-an-identity-card.png",
+    "previewSmall": "/mascots/preview/019-mascot-holding-an-identity-card-480.webp",
+    "previewLarge": "/mascots/preview/019-mascot-holding-an-identity-card-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "20": {
+    "original": "/mascots/original/020-mascot-beside-a-map-pin.png",
+    "previewSmall": "/mascots/preview/020-mascot-beside-a-map-pin-480.webp",
+    "previewLarge": "/mascots/preview/020-mascot-beside-a-map-pin-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "21": {
+    "original": "/mascots/original/021-mascot-holding-a-calendar-representing-experience.png",
+    "previewSmall": "/mascots/preview/021-mascot-holding-a-calendar-representing-experience-480.webp",
+    "previewLarge": "/mascots/preview/021-mascot-holding-a-calendar-representing-experience-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "22": {
+    "original": "/mascots/original/022-mascot-carrying-a-suitcase-representing-his-journey.png",
+    "previewSmall": "/mascots/preview/022-mascot-carrying-a-suitcase-representing-his-journey-480.webp",
+    "previewLarge": "/mascots/preview/022-mascot-carrying-a-suitcase-representing-his-journey-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "23": {
+    "original": "/mascots/original/023-mascot-climbing-career-steps.png",
+    "previewSmall": "/mascots/preview/023-mascot-climbing-career-steps-480.webp",
+    "previewLarge": "/mascots/preview/023-mascot-climbing-career-steps-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "24": {
+    "original": "/mascots/original/024-mascot-following-a-dotted-journey-path.png",
+    "previewSmall": "/mascots/preview/024-mascot-following-a-dotted-journey-path-480.webp",
+    "previewLarge": "/mascots/preview/024-mascot-following-a-dotted-journey-path-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "25": {
+    "original": "/mascots/original/025-mascot-looking-at-past-and-future-arrows.png",
+    "previewSmall": "/mascots/preview/025-mascot-looking-at-past-and-future-arrows-480.webp",
+    "previewLarge": "/mascots/preview/025-mascot-looking-at-past-and-future-arrows-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "26": {
+    "original": "/mascots/original/026-mascot-holding-a-childhood-photo-frame.png",
+    "previewSmall": "/mascots/preview/026-mascot-holding-a-childhood-photo-frame-480.webp",
+    "previewLarge": "/mascots/preview/026-mascot-holding-a-childhood-photo-frame-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "27": {
+    "original": "/mascots/original/027-mascot-standing-beside-milestone-flags.png",
+    "previewSmall": "/mascots/preview/027-mascot-standing-beside-milestone-flags-480.webp",
+    "previewLarge": "/mascots/preview/027-mascot-standing-beside-milestone-flags-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "28": {
+    "original": "/mascots/original/028-mascot-placing-a-pin-on-a-timeline.png",
+    "previewSmall": "/mascots/preview/028-mascot-placing-a-pin-on-a-timeline-480.webp",
+    "previewLarge": "/mascots/preview/028-mascot-placing-a-pin-on-a-timeline-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "29": {
+    "original": "/mascots/original/029-mascot-holding-a-project-card.png",
+    "previewSmall": "/mascots/preview/029-mascot-holding-a-project-card-480.webp",
+    "previewLarge": "/mascots/preview/029-mascot-holding-a-project-card-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "30": {
+    "original": "/mascots/original/030-mascot-standing-beside-a-portfolio-webpage.png",
+    "previewSmall": "/mascots/preview/030-mascot-standing-beside-a-portfolio-webpage-480.webp",
+    "previewLarge": "/mascots/preview/030-mascot-standing-beside-a-portfolio-webpage-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "31": {
+    "original": "/mascots/original/031-mascot-pointing-toward-a-website-preview.png",
+    "previewSmall": "/mascots/preview/031-mascot-pointing-toward-a-website-preview-480.webp",
+    "previewLarge": "/mascots/preview/031-mascot-pointing-toward-a-website-preview-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "32": {
+    "original": "/mascots/original/032-mascot-holding-multiple-stacked-project-cards.png",
+    "previewSmall": "/mascots/preview/032-mascot-holding-multiple-stacked-project-cards-480.webp",
+    "previewLarge": "/mascots/preview/032-mascot-holding-multiple-stacked-project-cards-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "33": {
+    "original": "/mascots/original/033-mascot-presenting-a-featured-project.png",
+    "previewSmall": "/mascots/preview/033-mascot-presenting-a-featured-project-480.webp",
+    "previewLarge": "/mascots/preview/033-mascot-presenting-a-featured-project-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "34": {
+    "original": "/mascots/original/034-mascot-opening-a-project-folder.png",
+    "previewSmall": "/mascots/preview/034-mascot-opening-a-project-folder-480.webp",
+    "previewLarge": "/mascots/preview/034-mascot-opening-a-project-folder-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "35": {
+    "original": "/mascots/original/035-mascot-revealing-a-project-from-behind-a-curtain.png",
+    "previewSmall": "/mascots/preview/035-mascot-revealing-a-project-from-behind-a-curtain-480.webp",
+    "previewLarge": "/mascots/preview/035-mascot-revealing-a-project-from-behind-a-curtain-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "36": {
+    "original": "/mascots/original/036-mascot-arranging-portfolio-cards.png",
+    "previewSmall": "/mascots/preview/036-mascot-arranging-portfolio-cards-480.webp",
+    "previewLarge": "/mascots/preview/036-mascot-arranging-portfolio-cards-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "37": {
+    "original": "/mascots/original/037-mascot-inspecting-a-project-with-a-magnifying-glass.png",
+    "previewSmall": "/mascots/preview/037-mascot-inspecting-a-project-with-a-magnifying-glass-480.webp",
+    "previewLarge": "/mascots/preview/037-mascot-inspecting-a-project-with-a-magnifying-glass-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "38": {
+    "original": "/mascots/original/038-mascot-comparing-two-project-versions.png",
+    "previewSmall": "/mascots/preview/038-mascot-comparing-two-project-versions-480.webp",
+    "previewLarge": "/mascots/preview/038-mascot-comparing-two-project-versions-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "39": {
+    "original": "/mascots/original/039-mascot-placing-a-project-into-a-display-frame.png",
+    "previewSmall": "/mascots/preview/039-mascot-placing-a-project-into-a-display-frame-480.webp",
+    "previewLarge": "/mascots/preview/039-mascot-placing-a-project-into-a-display-frame-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "40": {
+    "original": "/mascots/original/040-mascot-presenting-a-case-study-board.png",
+    "previewSmall": "/mascots/preview/040-mascot-presenting-a-case-study-board-480.webp",
+    "previewLarge": "/mascots/preview/040-mascot-presenting-a-case-study-board-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "41": {
+    "original": "/mascots/original/041-mascot-holding-a-laptop-showing-a-website.png",
+    "previewSmall": "/mascots/preview/041-mascot-holding-a-laptop-showing-a-website-480.webp",
+    "previewLarge": "/mascots/preview/041-mascot-holding-a-laptop-showing-a-website-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "42": {
+    "original": "/mascots/original/042-mascot-standing-inside-a-browser-window.png",
+    "previewSmall": "/mascots/preview/042-mascot-standing-inside-a-browser-window-480.webp",
+    "previewLarge": "/mascots/preview/042-mascot-standing-inside-a-browser-window-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "43": {
+    "original": "/mascots/original/043-mascot-launching-a-project-like-a-rocket.png",
+    "previewSmall": "/mascots/preview/043-mascot-launching-a-project-like-a-rocket-480.webp",
+    "previewLarge": "/mascots/preview/043-mascot-launching-a-project-like-a-rocket-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "44": {
+    "original": "/mascots/original/044-mascot-polishing-a-project-with-a-cloth.png",
+    "previewSmall": "/mascots/preview/044-mascot-polishing-a-project-with-a-cloth-480.webp",
+    "previewLarge": "/mascots/preview/044-mascot-polishing-a-project-with-a-cloth-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "45": {
+    "original": "/mascots/original/045-mascot-holding-a-before-and-after-panel.png",
+    "previewSmall": "/mascots/preview/045-mascot-holding-a-before-and-after-panel-480.webp",
+    "previewLarge": "/mascots/preview/045-mascot-holding-a-before-and-after-panel-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "46": {
+    "original": "/mascots/original/046-mascot-pointing-toward-project-metrics.png",
+    "previewSmall": "/mascots/preview/046-mascot-pointing-toward-project-metrics-480.webp",
+    "previewLarge": "/mascots/preview/046-mascot-pointing-toward-project-metrics-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "47": {
+    "original": "/mascots/original/047-mascot-holding-a-code-window.png",
+    "previewSmall": "/mascots/preview/047-mascot-holding-a-code-window-480.webp",
+    "previewLarge": "/mascots/preview/047-mascot-holding-a-code-window-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "48": {
+    "original": "/mascots/original/048-mascot-typing-on-a-laptop.png",
+    "previewSmall": "/mascots/preview/048-mascot-typing-on-a-laptop-480.webp",
+    "previewLarge": "/mascots/preview/048-mascot-typing-on-a-laptop-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "49": {
+    "original": "/mascots/original/049-mascot-surrounded-by-code-brackets.png",
+    "previewSmall": "/mascots/preview/049-mascot-surrounded-by-code-brackets-480.webp",
+    "previewLarge": "/mascots/preview/049-mascot-surrounded-by-code-brackets-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "50": {
+    "original": "/mascots/original/050-mascot-holding-a-terminal-window.png",
+    "previewSmall": "/mascots/preview/050-mascot-holding-a-terminal-window-480.webp",
+    "previewLarge": "/mascots/preview/050-mascot-holding-a-terminal-window-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "51": {
+    "original": "/mascots/original/051-mascot-running-a-command.png",
+    "previewSmall": "/mascots/preview/051-mascot-running-a-command-480.webp",
+    "previewLarge": "/mascots/preview/051-mascot-running-a-command-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "52": {
+    "original": "/mascots/original/052-mascot-debugging-with-a-magnifying-glass.png",
+    "previewSmall": "/mascots/preview/052-mascot-debugging-with-a-magnifying-glass-480.webp",
+    "previewLarge": "/mascots/preview/052-mascot-debugging-with-a-magnifying-glass-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "53": {
+    "original": "/mascots/original/053-mascot-catching-a-bug.png",
+    "previewSmall": "/mascots/preview/053-mascot-catching-a-bug-480.webp",
+    "previewLarge": "/mascots/preview/053-mascot-catching-a-bug-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "54": {
+    "original": "/mascots/original/054-mascot-removing-a-bug-from-code.png",
+    "previewSmall": "/mascots/preview/054-mascot-removing-a-bug-from-code-480.webp",
+    "previewLarge": "/mascots/preview/054-mascot-removing-a-bug-from-code-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "55": {
+    "original": "/mascots/original/055-mascot-connecting-code-blocks.png",
+    "previewSmall": "/mascots/preview/055-mascot-connecting-code-blocks-480.webp",
+    "previewLarge": "/mascots/preview/055-mascot-connecting-code-blocks-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "56": {
+    "original": "/mascots/original/056-mascot-assembling-components.png",
+    "previewSmall": "/mascots/preview/056-mascot-assembling-components-480.webp",
+    "previewLarge": "/mascots/preview/056-mascot-assembling-components-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "57": {
+    "original": "/mascots/original/057-mascot-building-a-website-with-blocks.png",
+    "previewSmall": "/mascots/preview/057-mascot-building-a-website-with-blocks-480.webp",
+    "previewLarge": "/mascots/preview/057-mascot-building-a-website-with-blocks-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "58": {
+    "original": "/mascots/original/058-mascot-holding-frontend-and-backend-panels.png",
+    "previewSmall": "/mascots/preview/058-mascot-holding-frontend-and-backend-panels-480.webp",
+    "previewLarge": "/mascots/preview/058-mascot-holding-frontend-and-backend-panels-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "59": {
+    "original": "/mascots/original/059-mascot-connecting-an-api-plug.png",
+    "previewSmall": "/mascots/preview/059-mascot-connecting-an-api-plug-480.webp",
+    "previewLarge": "/mascots/preview/059-mascot-connecting-an-api-plug-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "60": {
+    "original": "/mascots/original/060-mascot-sending-an-api-request.png",
+    "previewSmall": "/mascots/preview/060-mascot-sending-an-api-request-480.webp",
+    "previewLarge": "/mascots/preview/060-mascot-sending-an-api-request-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "61": {
+    "original": "/mascots/original/061-mascot-holding-json-shaped-blocks.png",
+    "previewSmall": "/mascots/preview/061-mascot-holding-json-shaped-blocks-480.webp",
+    "previewLarge": "/mascots/preview/061-mascot-holding-json-shaped-blocks-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "62": {
+    "original": "/mascots/original/062-mascot-working-with-a-database-cylinder.png",
+    "previewSmall": "/mascots/preview/062-mascot-working-with-a-database-cylinder-480.webp",
+    "previewLarge": "/mascots/preview/062-mascot-working-with-a-database-cylinder-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "63": {
+    "original": "/mascots/original/063-mascot-organizing-database-tables.png",
+    "previewSmall": "/mascots/preview/063-mascot-organizing-database-tables-480.webp",
+    "previewLarge": "/mascots/preview/063-mascot-organizing-database-tables-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "64": {
+    "original": "/mascots/original/064-mascot-connecting-database-nodes.png",
+    "previewSmall": "/mascots/preview/064-mascot-connecting-database-nodes-480.webp",
+    "previewLarge": "/mascots/preview/064-mascot-connecting-database-nodes-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "65": {
+    "original": "/mascots/original/065-mascot-pushing-code-into-a-repository.png",
+    "previewSmall": "/mascots/preview/065-mascot-pushing-code-into-a-repository-480.webp",
+    "previewLarge": "/mascots/preview/065-mascot-pushing-code-into-a-repository-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "66": {
+    "original": "/mascots/original/066-mascot-pulling-code-from-a-cloud.png",
+    "previewSmall": "/mascots/preview/066-mascot-pulling-code-from-a-cloud-480.webp",
+    "previewLarge": "/mascots/preview/066-mascot-pulling-code-from-a-cloud-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "67": {
+    "original": "/mascots/original/067-mascot-merging-two-branches.png",
+    "previewSmall": "/mascots/preview/067-mascot-merging-two-branches-480.webp",
+    "previewLarge": "/mascots/preview/067-mascot-merging-two-branches-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "68": {
+    "original": "/mascots/original/068-mascot-resolving-a-merge-conflict.png",
+    "previewSmall": "/mascots/preview/068-mascot-resolving-a-merge-conflict-480.webp",
+    "previewLarge": "/mascots/preview/068-mascot-resolving-a-merge-conflict-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "69": {
+    "original": "/mascots/original/069-mascot-reviewing-a-pull-request.png",
+    "previewSmall": "/mascots/preview/069-mascot-reviewing-a-pull-request-480.webp",
+    "previewLarge": "/mascots/preview/069-mascot-reviewing-a-pull-request-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "70": {
+    "original": "/mascots/original/070-mascot-approving-code-with-a-checkmark.png",
+    "previewSmall": "/mascots/preview/070-mascot-approving-code-with-a-checkmark-480.webp",
+    "previewLarge": "/mascots/preview/070-mascot-approving-code-with-a-checkmark-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "71": {
+    "original": "/mascots/original/071-mascot-rejecting-broken-code.png",
+    "previewSmall": "/mascots/preview/071-mascot-rejecting-broken-code-480.webp",
+    "previewLarge": "/mascots/preview/071-mascot-rejecting-broken-code-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "72": {
+    "original": "/mascots/original/072-mascot-writing-tests.png",
+    "previewSmall": "/mascots/preview/072-mascot-writing-tests-480.webp",
+    "previewLarge": "/mascots/preview/072-mascot-writing-tests-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "73": {
+    "original": "/mascots/original/073-mascot-running-automated-tests.png",
+    "previewSmall": "/mascots/preview/073-mascot-running-automated-tests-480.webp",
+    "previewLarge": "/mascots/preview/073-mascot-running-automated-tests-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "74": {
+    "original": "/mascots/original/074-mascot-celebrating-passing-tests.png",
+    "previewSmall": "/mascots/preview/074-mascot-celebrating-passing-tests-480.webp",
+    "previewLarge": "/mascots/preview/074-mascot-celebrating-passing-tests-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "75": {
+    "original": "/mascots/original/075-mascot-fixing-failing-tests.png",
+    "previewSmall": "/mascots/preview/075-mascot-fixing-failing-tests-480.webp",
+    "previewLarge": "/mascots/preview/075-mascot-fixing-failing-tests-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "76": {
+    "original": "/mascots/original/076-mascot-refactoring-tangled-code.png",
+    "previewSmall": "/mascots/preview/076-mascot-refactoring-tangled-code-480.webp",
+    "previewLarge": "/mascots/preview/076-mascot-refactoring-tangled-code-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "77": {
+    "original": "/mascots/original/077-mascot-cleaning-messy-code.png",
+    "previewSmall": "/mascots/preview/077-mascot-cleaning-messy-code-480.webp",
+    "previewLarge": "/mascots/preview/077-mascot-cleaning-messy-code-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "78": {
+    "original": "/mascots/original/078-mascot-holding-a-reusable-component.png",
+    "previewSmall": "/mascots/preview/078-mascot-holding-a-reusable-component-480.webp",
+    "previewLarge": "/mascots/preview/078-mascot-holding-a-reusable-component-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "79": {
+    "original": "/mascots/original/079-mascot-building-a-design-system-component.png",
+    "previewSmall": "/mascots/preview/079-mascot-building-a-design-system-component-480.webp",
+    "previewLarge": "/mascots/preview/079-mascot-building-a-design-system-component-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  },
+  "80": {
+    "original": "/mascots/original/080-mascot-deploying-an-application.png",
+    "previewSmall": "/mascots/preview/080-mascot-deploying-an-application-480.webp",
+    "previewLarge": "/mascots/preview/080-mascot-deploying-an-application-960.webp",
+    "width": 960,
+    "height": 960,
+    "extension": "png"
+  }
+}

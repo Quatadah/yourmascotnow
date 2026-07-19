@@ -21,7 +21,18 @@ The app runs at `http://localhost:3000`.
 
 ## Illustration assets
 
-The catalog is intentionally complete even when original art has not been supplied. Missing pieces use an awaiting-art proof frame and do not expose a download action.
+The catalog contains all 80 illustrations recovered from the original ChatGPT image conversation. Items 001–010 are the individual 1254px exports. Later responses were delivered as contact sheets, so their original sheets are preserved in `assets/chatgpt-source/` and reproducibly separated into individual, title-free 960px PNGs by `scripts/extract-chatgpt-sheets.mjs`.
+
+To rebuild the extracted set and responsive gallery assets:
+
+```bash
+pnpm assets:extract-chatgpt
+pnpm assets:sync
+```
+
+The contact-sheet extractor uses reviewed, sheet-specific coordinates instead of directory order or image recognition. The embedded labels remain in the preserved source sheets; website titles come from the accessible catalog data.
+
+For future illustration exports:
 
 1. Put each exported PNG, JPEG, or WebP in `assets/incoming/`.
 2. Give the file either a `001`–`080` numeric prefix or the exact title slug.
@@ -40,6 +51,7 @@ The synchronizer never maps by directory order. It rejects unknown names and dup
 ## Commands
 
 ```bash
+pnpm assets:extract-chatgpt # Rebuild items 011–080 from preserved source sheets
 pnpm assets:sync  # Import supplied artwork and generate responsive previews
 pnpm typecheck    # TypeScript validation
 pnpm lint         # ESLint

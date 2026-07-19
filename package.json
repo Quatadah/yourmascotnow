@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
+    "assets:extract-chatgpt": "node scripts/extract-chatgpt-sheets.mjs",
     "assets:sync": "node scripts/sync-assets.mjs",
     "build": "vite build",
     "preview": "vite preview",
