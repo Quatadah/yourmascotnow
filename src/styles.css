@@ -4080,6 +4080,18 @@ body {
   border-color: var(--rule-strong);
 }
 
+.site-footer p a {
+  color: var(--ink);
+  font-weight: 720;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.site-footer p a:hover {
+  text-decoration-thickness: 2px;
+}
+
 @media (max-width: 74rem) {
   .catalog-controls {
     grid-template-areas:

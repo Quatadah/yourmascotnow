@@ -221,8 +221,16 @@ function IllustrationDetail() {
           Your Mascot Now
         </Link>
         <p>
-          Artwork © {new Date().getFullYear()} Your Mascot Now. All rights
-          reserved.
+          Designed and built by{' '}
+          <a
+            href="https://quatadahnasdami.xyz"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Quatadah
+          </a>
+          .<br /> Artwork © {new Date().getFullYear()} Your Mascot Now. All
+          rights reserved.
         </p>
       </footer>
     </div>

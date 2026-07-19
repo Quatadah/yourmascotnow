@@ -278,8 +278,16 @@ function Home() {
           <span>First edition · 80 illustrations</span>
         </div>
         <p>
-          Artwork © {new Date().getFullYear()} Your Mascot Now. All rights
-          reserved.
+          Designed and built by{' '}
+          <a
+            href="https://quatadahnasdami.xyz"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Quatadah
+          </a>
+          .<br /> Artwork © {new Date().getFullYear()} Your Mascot Now. All
+          rights reserved.
         </p>
       </footer>
     </div>

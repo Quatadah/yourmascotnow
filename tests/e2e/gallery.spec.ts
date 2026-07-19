@@ -35,6 +35,10 @@ test('browses, searches, and filters the 80-illustration catalog', async ({
   await expect(page.locator('.illustration-card').first()).not.toContainText(
     'YM/',
   )
+  await expect(page.getByRole('link', { name: 'Quatadah' })).toHaveAttribute(
+    'href',
+    'https://quatadahnasdami.xyz',
+  )
 
   await page.getByRole('searchbox', { name: /search all 80/i }).fill('logo')
   await expect(page).toHaveURL(/q=logo/)
